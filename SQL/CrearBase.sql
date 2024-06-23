@@ -40,7 +40,7 @@ CREATE TABLE GASTOS(
 	ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
-	Monto smallmoney)
+	Monto money)
 GO
 
 
@@ -48,7 +48,7 @@ CREATE TABLE INGRESOS(
 	ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
-	Monto smallmoney)
+	Monto money)
 GO
 
 
@@ -57,7 +57,7 @@ CREATE TABLE METAS(
 	ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
-	Monto smallmoney)
+	Monto money)
 GO
 
 
