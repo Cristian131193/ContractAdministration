@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="StageIngresos"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{11233117-147D-4B8E-BEE5-5F13CC4FA159}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{D1D5D2BE-93DE-448F-A107-D35F91C6F543}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -84,6 +84,45 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\ELIMINAR DATAOS TABLA STAGE INGRESOS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{FEF52022-ABFD-4FE6-B355-110A31D853FB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ELIMINAR DATAOS TABLA STAGE INGRESOS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{E499480F-89D3-4B29-8884-557138A1BE6F}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE INGRESOS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{EBA7A029-1786-4E4A-B1E7-4305EA366826}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{68A55931-FDA2-4F6A-A537-3C2C1A0D9AED}"
+          SQLTask:SqlStatementSource="SELECT MAX(ETLExecution) FROM&#xA;INGRESOS"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::ETLExecution_Ultimo" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Stage Ingresos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
@@ -115,13 +154,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Stage Ingresos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Stage Ingresos.EventHandlers[OnPostExecute]\ACTUALIZAR CANTIDAD FILAS CARGADAS METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{23F06D8A-DF64-4925-B856-DC2182595244}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="ACTUALIZAR CANTIDAD FILAS CARGADAS METADATA"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -166,13 +205,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Stage Ingresos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Stage Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{6C998A85-1342-4B81-AA21-693852DB80EF}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="INSERTAR METADATA"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -201,13 +240,13 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Stage Ingresos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1"
+              DTS:refId="Package\Stage Ingresos.EventHandlers[OnPreExecute]\SELECCIONAR ULTIMA EJECUCION"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{3230AB2F-576E-447C-B60F-6EC1F933B35B}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL 1"
+              DTS:ObjectName="SELECCIONAR ULTIMA EJECUCION"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -233,10 +272,10 @@
               DTS:refId="Package\Stage Ingresos.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
               DTS:DTSID="{A6DEB376-D283-415C-BCB2-D0C29477BAF8}"
-              DTS:From="Package\Stage Ingresos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+              DTS:From="Package\Stage Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
-              DTS:To="Package\Stage Ingresos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1" />
+              DTS:To="Package\Stage Ingresos.EventHandlers[OnPreExecute]\SELECCIONAR ULTIMA EJECUCION" />
           </DTS:PrecedenceConstraints>
         </DTS:EventHandler>
       </DTS:EventHandlers>
@@ -340,11 +379,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Stage Ingresos\Destino de OLE DB"
+              refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="Destino de OLE DB"
+              name="DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS"
               usesDispositions="true"
               version="4">
               <properties>
@@ -397,7 +436,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Stage Ingresos\Destino de OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -405,75 +444,75 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ID]"
                       cachedDataType="i4"
                       cachedName="ID"
-                      externalMetadataColumnId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[ID]" />
                     <inputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Fecha"
-                      externalMetadataColumnId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
                     <inputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Descrip]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Descrip]"
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Descrip"
-                      externalMetadataColumnId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
+                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Descrip]" />
                     <inputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
                       cachedDataType="cy"
                       cachedName="Monto"
-                      externalMetadataColumnId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
                     <inputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
                       cachedDataType="dbTimeStamp"
                       cachedName="ETLLoad"
-                      externalMetadataColumnId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
                       lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
                     <inputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
                       cachedDataType="i4"
                       cachedName="ETLExecution"
-                      externalMetadataColumnId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
                       lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
                       dataType="dbTimeStamp"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
                       dataType="wstr"
                       length="60"
                       name="Descrip" />
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       dataType="cy"
                       name="Monto" />
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
                       dataType="dbTimeStamp"
                       name="ETLLoad" />
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
                       dataType="i4"
                       name="ETLExecution" />
                   </externalMetadataColumns>
@@ -481,22 +520,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Stage Ingresos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Stage Ingresos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Stage Ingresos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Stage Ingresos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -718,50 +757,11 @@ WHERE ETLExecution = ?</property>
               startId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Stage Ingresos.Paths[Salida de Recuento de filas 1]"
-              endId="Package\Stage Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB]"
               name="Salida de Recuento de filas 1"
               startId="Package\Stage Ingresos\Recuento de filas.Outputs[Salida de Recuento de filas 1]" />
           </paths>
         </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Tarea Ejecutar SQL"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{FEF52022-ABFD-4FE6-B355-110A31D853FB}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Tarea Ejecutar SQL"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{E499480F-89D3-4B29-8884-557138A1BE6F}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE INGRESOS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Tarea Ejecutar SQL 1"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Tarea Ejecutar SQL"
-      DTS:DTSID="{EBA7A029-1786-4E4A-B1E7-4305EA366826}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Tarea Ejecutar SQL 1"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{68A55931-FDA2-4F6A-A537-3C2C1A0D9AED}"
-          SQLTask:SqlStatementSource="SELECT MAX(ETLExecution) FROM&#xA;INGRESOS"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="0"
-            SQLTask:DtsVariableName="User::ETLExecution_Ultimo" />
-        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -770,15 +770,15 @@ WHERE ETLExecution = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
       DTS:DTSID="{DE696D2D-3C49-43D8-A93A-7FB57EC2A1EF}"
-      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:From="Package\ELIMINAR DATAOS TABLA STAGE INGRESOS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
-      DTS:To="Package\Tarea Ejecutar SQL 1" />
+      DTS:To="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
       DTS:CreationName=""
       DTS:DTSID="{5B3BEC0F-50CD-4EB5-8536-13544B87483A}"
-      DTS:From="Package\Tarea Ejecutar SQL 1"
+      DTS:From="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 1"
       DTS:To="Package\Stage Ingresos" />
@@ -800,27 +800,39 @@ WHERE ETLExecution = ?</property>
           Id="Package\Stage Ingresos"
           TopLeft="180,311" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\Tarea Ejecutar SQL"
+          Size="318,42"
+          Id="Package\ELIMINAR DATAOS TABLA STAGE INGRESOS"
           TopLeft="171,57" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Tarea Ejecutar SQL 1"
+          Size="424,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
           TopLeft="168,191" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="259.75,99">
+          TopLeft="330,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,92"
+              EndConnector="50,92"
               Start="0,0"
-              End="0,84.5">
+              End="50,84.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,84.5" />
+                    End="0,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42"
+                    Point2="0,46"
+                    Point3="4,46" />
+                  <mssgle:LineSegment
+                    End="46,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46,46"
+                    Point2="50,46"
+                    Point3="50,50" />
+                  <mssgle:LineSegment
+                    End="50,84.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -831,18 +843,30 @@ WHERE ETLExecution = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="258.5,233">
+          TopLeft="380,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78"
+              EndConnector="-123.5,78"
               Start="0,0"
-              End="0,70.5">
+              End="-123.5,70.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.5" />
+                    End="0,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35"
+                    Point2="0,39"
+                    Point3="-4,39" />
+                  <mssgle:LineSegment
+                    End="-119.5,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-119.5,39"
+                    Point2="-123.5,39"
+                    Point3="-123.5,43" />
+                  <mssgle:LineSegment
+                    End="-123.5,70.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -860,13 +884,55 @@ WHERE ETLExecution = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="381,42"
-          Id="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS"
-          TopLeft="83,53" />
+          Size="164,42"
+          Id="Package\Stage Ingresos\Recuento de filas"
+          TopLeft="189,325" />
         <NodeLayout
           Size="168,42"
           Id="Package\Stage Ingresos\Columna derivada"
           TopLeft="125,190" />
+        <NodeLayout
+          Size="381,42"
+          Id="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS"
+          TopLeft="83,53" />
+        <NodeLayout
+          Size="393,42"
+          Id="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS"
+          TopLeft="284,475" />
+        <EdgeLayout
+          Id="Package\Stage Ingresos.Paths[Salida de Recuento de filas 1]"
+          TopLeft="271,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="209.5,108"
+              Start="0,0"
+              End="209.5,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50"
+                    Point2="0,54"
+                    Point3="4,54" />
+                  <mssgle:LineSegment
+                    End="205.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="205.5,54"
+                    Point2="209.5,54"
+                    Point3="209.5,58" />
+                  <mssgle:LineSegment
+                    End="209.5,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Ingresos.Paths[Salida de origen de OLE DB]"
           TopLeft="273.5,95">
@@ -901,10 +967,6 @@ WHERE ETLExecution = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Stage Ingresos\Recuento de filas"
-          TopLeft="189,325" />
         <EdgeLayout
           Id="Package\Stage Ingresos.Paths[Salida de columna derivada]"
           TopLeft="209,232">
@@ -939,44 +1001,6 @@ WHERE ETLExecution = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Stage Ingresos\Destino de OLE DB"
-          TopLeft="284,475" />
-        <EdgeLayout
-          Id="Package\Stage Ingresos.Paths[Salida de Recuento de filas 1]"
-          TopLeft="271,367">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="100.5,108"
-              Start="0,0"
-              End="100.5,100.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50"
-                    Point2="0,54"
-                    Point3="4,54" />
-                  <mssgle:LineSegment
-                    End="96.5,54" />
-                  <mssgle:CubicBezierSegment
-                    Point1="96.5,54"
-                    Point2="100.5,54"
-                    Point3="100.5,58" />
-                  <mssgle:LineSegment
-                    End="100.5,100.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -984,24 +1008,24 @@ WHERE ETLExecution = ?</property>
     design-time-name="Package\Stage Ingresos.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Stage Ingresos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+          Size="197,42"
+          Id="Package\Stage Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
           TopLeft="90,70" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Stage Ingresos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1"
+          Size="268,42"
+          Id="Package\Stage Ingresos.EventHandlers[OnPreExecute]\SELECCIONAR ULTIMA EJECUCION"
           TopLeft="220,213" />
         <EdgeLayout
           Id="Package\Stage Ingresos.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
-          TopLeft="178,112">
+          TopLeft="188.5,112">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="134.5,101"
+              EndConnector="165.5,101"
               Start="0,0"
-              End="134.5,93.5">
+              End="165.5,93.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1012,21 +1036,19 @@ WHERE ETLExecution = ?</property>
                     Point2="0,50.5"
                     Point3="4,50.5" />
                   <mssgle:LineSegment
-                    End="130.5,50.5" />
+                    End="161.5,50.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="130.5,50.5"
-                    Point2="134.5,50.5"
-                    Point3="134.5,54.5" />
+                    Point1="161.5,50.5"
+                    Point2="165.5,50.5"
+                    Point3="165.5,54.5" />
                   <mssgle:LineSegment
-                    End="134.5,93.5" />
+                    End="165.5,93.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1038,8 +1060,8 @@ WHERE ETLExecution = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Stage Ingresos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+          Size="368,42"
+          Id="Package\Stage Ingresos.EventHandlers[OnPostExecute]\ACTUALIZAR CANTIDAD FILAS CARGADAS METADATA"
           TopLeft="82,64" />
       </GraphLayout>
     </LayoutInfo>
@@ -1053,7 +1075,7 @@ WHERE ETLExecution = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Stage Ingresos\Destino de OLE DB">
+    design-time-name="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
