@@ -34,7 +34,7 @@ CREATE TABLE METAS(
 GO
 
 CREATE TABLE TIEMPO(
-	FechaID INT NOT NULL,
+	FechaID INT IDENTITY (1,1) NOT NULL,
 	Fecha datetime NULL,
 	Anno nvarchar(4) NULL,
 	Mes nvarchar(2) NULL,
@@ -53,4 +53,6 @@ CREATE TABLE MOVIMIENTOS(
 	ETLExecution int	
 	)
 GO
+
+
 

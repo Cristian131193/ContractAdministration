@@ -1,0 +1,1273 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/5/2024 8:27:17 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-C27PBJT"
+  DTS:CreatorName="DESKTOP-C27PBJT\cristian"
+  DTS:DTSID="{D8F8060F-6BE7-4BF3-9898-43D4E7EC8EF2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5314.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="StageTiempo"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{C36CEA91-25C9-4621-A4DB-C6FC9629CB31}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C5A63CE9-6564-4EE3-A910-B47F790662F0}"
+      DTS:ObjectName="LocalHost.GASTOSPERSONALES_LOAD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_LOAD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{C5A63CE9-6564-4EE3-A910-B47F790662F0}LocalHost.GASTOSPERSONALES_LOAD;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3F74E005-9DF4-4505-A9C6-2502EE786F20}"
+      DTS:ObjectName="LocalHost.GASTOSPERSONALES_METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{3F74E005-9DF4-4505-A9C6-2502EE786F20}LocalHost.GASTOSPERSONALES_METADATA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C06EE109-C8DA-4936-8D76-8E48748B75DE}"
+      DTS:ObjectName="LocalHost.GASTOSPERSONALES_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{C06EE109-C8DA-4936-8D76-8E48748B75DE}LocalHost.GASTOSPERSONALES_STAGE;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BB852BB6-0319-4AD5-8692-6FED4FD86DBC}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLExecution">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{87C35BE9-CD4C-4834-8233-D7CDF35D8D72}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLExecution_Ultimo">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BEB9FDE6-0DE8-4EA7-B07D-25A9A3ADF12D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLExecution_UltimoGastos">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{48123337-A508-4655-87DE-D023FC06A64F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLExecution_UltimoIngresos">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A75F1046-EF89-405E-B32A-C82229FC7558}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLExecution_UltimoMetas">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EF9C0412-3B2F-4FF0-87C0-5AA2BD85BBE8}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLRowCounts">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ELIMINAR DATAOS TABLA STAGE TIEMPO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{F5AB52DB-6AFD-4706-87B4-4053E6FCAF80}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ELIMINAR DATAOS TABLA STAGE TIEMPO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C06EE109-C8DA-4936-8D76-8E48748B75DE}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE TIEMPO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{afa1767e-dc21-49bc-a0db-cb236fe06f31}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C5A63CE9-6564-4EE3-A910-B47F790662F0}"
+          SQLTask:SqlStatementSource="SELECT MAX(ETLExecution) FROM&#xA;GASTOS"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::ETLExecution_UltimoGastos" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{addd9b49-3f81-4495-9150-ffb1de7e922e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C5A63CE9-6564-4EE3-A910-B47F790662F0}"
+          SQLTask:SqlStatementSource="SELECT MAX(ETLExecution) FROM&#xA;INGRESOS"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::ETLExecution_UltimoIngresos" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{03DCAEEF-3853-40B4-931F-95B448C54254}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C5A63CE9-6564-4EE3-A910-B47F790662F0}"
+          SQLTask:SqlStatementSource="SELECT MAX(ETLExecution) FROM&#xA;METAS"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::ETLExecution_UltimoMetas" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Stage Tiempo"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{76E44D2A-0429-4A16-9725-A9E09062311D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Stage Tiempo"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Stage Tiempo.EventHandlers[OnPostExecute]"
+          DTS:CreationName="OnPostExecute"
+          DTS:DTSID="{B0920A9C-3D6C-444B-85FD-02C321C8F486}"
+          DTS:EventID="1873585424"
+          DTS:EventName="OnPostExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="La propiedad de propagación del evento"
+              DTS:DTSID="{213B6A78-BC3B-4809-A0F4-B5F4CFEF6DFC}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Stage Tiempo.EventHandlers[OnPostExecute]\ACTUALIZAR CANTIDAD FILAS CARGADAS METADATA"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{9FF14003-FFBF-458F-A7ED-3D813EAC6318}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="ACTUALIZAR CANTIDAD FILAS CARGADAS METADATA"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3F74E005-9DF4-4505-A9C6-2502EE786F20}"
+                  SQLTask:SqlStatementSource="UPDATE ETLExecution&#xA;SET ETLCountRows = ?&#xA;WHERE ID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="User::ETLRowCounts"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="User::ETLExecution"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="3"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+        <DTS:EventHandler
+          DTS:refId="Package\Stage Tiempo.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{9724070D-5C89-4B09-9A73-FE7125A03F9E}"
+          DTS:EventID="-10654823"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="La propiedad de propagación del evento"
+              DTS:DTSID="{CE9BE35F-EF10-40E0-B433-F30BCD703B05}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Stage Tiempo.EventHandlers[OnPreExecute]\INSERTAR METADATA"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{43C77365-A11C-4B37-BC26-0D0C688CB6B6}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="INSERTAR METADATA"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3F74E005-9DF4-4505-A9C6-2502EE786F20}"
+                  SQLTask:SqlStatementSource="INSERT INTO ETLExecution (UserName, MachineName,&#xA;PackageName, ETLLoad)&#xA;Values(?,?,?,GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="System::UserName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="130"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="System::MachineName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="130"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="2"
+                    SQLTask:DtsVariableName="System::PackageName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="130"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Stage Tiempo.EventHandlers[OnPreExecute]\SELECCIONAR ULTIMA EJECUCION"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{6638D6D2-CBEE-4FFD-B75E-8A7C4661140D}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="SELECCIONAR ULTIMA EJECUCION"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{3F74E005-9DF4-4505-A9C6-2502EE786F20}"
+                  SQLTask:SqlStatementSource="SELECT TOP(1) ID FROM ETLExecution&#xA;WHERE PackageName = ?&#xA;Order By ID Desc"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ETLExecution" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="0"
+                    SQLTask:DtsVariableName="System::PackageName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="130"
+                    SQLTask:ParameterSize="-1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Stage Tiempo.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
+              DTS:CreationName=""
+              DTS:DTSID="{AD5B9BED-A434-45B5-9AC6-195F2A12FABA}"
+              DTS:From="Package\Stage Tiempo.EventHandlers[OnPreExecute]\INSERTAR METADATA"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Restricción"
+              DTS:To="Package\Stage Tiempo.EventHandlers[OnPreExecute]\SELECCIONAR ULTIMA EJECUCION" />
+          </DTS:PrecedenceConstraints>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Stage Tiempo\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Stage Tiempo\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Stage Tiempo\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      name="ETLLoad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      name="ETLExecution"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::ETLExecution]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::ETLExecution]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Stage Tiempo\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[TIEMPO]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ETLLoad"
+                      externalMetadataColumnId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      lineageId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
+                    <inputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
+                      cachedDataType="i4"
+                      cachedName="ETLExecution"
+                      externalMetadataColumnId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      lineageId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
+                    <inputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Fecha"
+                      externalMetadataColumnId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
+                    <inputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].Columns[Anno]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="Anno"
+                      externalMetadataColumnId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Anno]"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Anno]" />
+                    <inputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].Columns[Mes]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="Mes"
+                      externalMetadataColumnId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Mes]"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Mes]" />
+                    <inputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].Columns[Dia]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="Dia"
+                      externalMetadataColumnId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Día]"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Dia]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      dataType="dbTimeStamp"
+                      name="ETLLoad" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      dataType="i4"
+                      name="ETLExecution" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaID]"
+                      dataType="i4"
+                      name="FechaID" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      dataType="dbTimeStamp"
+                      name="Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Anno]"
+                      dataType="wstr"
+                      length="4"
+                      name="Anno" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Mes]"
+                      dataType="wstr"
+                      length="2"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Día]"
+                      dataType="wstr"
+                      length="2"
+                      name="Día" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT [Fecha],
+                CAST(YEAR(Fecha) AS nvarchar(4)) AS Anno,
+				RIGHT(REPLICATE('0',2) + CAST(MONTH(Fecha) AS nvarchar(4)) , 2) AS Mes,
+				RIGHT(REPLICATE('0',2) + CAST(DAY(Fecha) AS nvarchar(4)) , 2) AS Dia
+FROM [GASTOSPERSONALES_LOAD].[dbo].[GASTOS]
+WHERE ETLExecution = ?
+
+UNION 
+
+SELECT DISTINCT [Fecha],
+                CAST(YEAR(Fecha) AS nvarchar(4)) AS Anno,
+				RIGHT(REPLICATE('0',2) + CAST(MONTH(Fecha) AS nvarchar(4)) , 2) AS Mes,
+				RIGHT(REPLICATE('0',2) + CAST(DAY(Fecha) AS nvarchar(4)) , 2) AS Dia
+FROM [GASTOSPERSONALES_LOAD].[dbo].[INGRESOS]
+WHERE ETLExecution = ?
+
+UNION 
+
+SELECT DISTINCT [Fecha],
+                CAST(YEAR(Fecha) AS nvarchar(4)) AS Anno,
+				RIGHT(REPLICATE('0',2) + CAST(MONTH(Fecha) AS nvarchar(4)) , 2) AS Mes,
+				RIGHT(REPLICATE('0',2) + CAST(DAY(Fecha) AS nvarchar(4)) , 2) AS Dia
+FROM [GASTOSPERSONALES_LOAD].[dbo].[METAS]
+WHERE ETLExecution = ?</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping">"Parámetro0:Input",{BEB9FDE6-0DE8-4EA7-B07D-25A9A3ADF12D};"Parámetro1:Input",{48123337-A508-4655-87DE-D023FC06A64F};"Parámetro2:Input",{A75F1046-EF89-405E-B32A-C82229FC7558};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      name="Fecha"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Anno]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Anno]"
+                      length="4"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Anno]"
+                      name="Anno"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Mes]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Mes]"
+                      length="2"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Mes]"
+                      name="Mes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Dia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Dia]"
+                      length="2"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].Columns[Dia]"
+                      name="Dia"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      dataType="dbTimeStamp"
+                      name="Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Anno]"
+                      dataType="wstr"
+                      length="4"
+                      name="Anno" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Mes]"
+                      dataType="wstr"
+                      length="2"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Dia]"
+                      dataType="wstr"
+                      length="2"
+                      name="Dia" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      name="Fecha" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Anno]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Anno]"
+                      name="Anno" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Mes]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Mes]"
+                      name="Mes" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Dia]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[Dia]"
+                      name="Dia" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Stage Tiempo\Recuento de filas"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Recuento de filas;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Cuenta las filas a medida que pasan por un flujo de datos. Por ejemplo, se usa el número de filas procesadas para determinar si deben o no realizarse operaciones de limpieza o actualizar el texto de un mensaje de correo electrónico para comunicar el estado de procesamiento."
+              name="Recuento de filas">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el recuento de filas."
+                  name="VariableName">User::ETLRowCounts</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Stage Tiempo\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
+                  hasSideEffects="true"
+                  name="Entrada de Recuento de filas 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Stage Tiempo\Recuento de filas.Outputs[Salida de Recuento de filas 1]"
+                  name="Salida de Recuento de filas 1"
+                  synchronousInputId="Package\Stage Tiempo\Recuento de filas.Inputs[Entrada de Recuento de filas 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Stage Tiempo.Paths[Salida de columna derivada]"
+              endId="Package\Stage Tiempo\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
+              name="Salida de columna derivada"
+              startId="Package\Stage Tiempo\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Stage Tiempo.Paths[Salida de origen de OLE DB]"
+              endId="Package\Stage Tiempo\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\Stage Tiempo.Paths[Salida de Recuento de filas 1]"
+              endId="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de Recuento de filas 1"
+              startId="Package\Stage Tiempo\Recuento de filas.Outputs[Salida de Recuento de filas 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{6FCD0472-9E2F-4CBF-B56D-0171108D00B2}"
+      DTS:From="Package\ELIMINAR DATAOS TABLA STAGE TIEMPO"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F74D194C-0D1E-4382-94E3-0208675C0392}"
+      DTS:From="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{C7A0A21B-34D2-446A-9CD1-860C1ECBDC30}"
+      DTS:From="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{0316C34A-2F59-4E40-ACB3-098EB9774C89}"
+      DTS:From="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 3"
+      DTS:To="Package\Stage Tiempo" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="302,42"
+          Id="Package\ELIMINAR DATAOS TABLA STAGE TIEMPO"
+          TopLeft="171,57" />
+        <NodeLayout
+          Size="403,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD"
+          TopLeft="168,191" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Stage Tiempo"
+          TopLeft="265,550" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="322,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.5,92"
+              Start="0,0"
+              End="47.5,84.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42"
+                    Point2="0,46"
+                    Point3="4,46" />
+                  <mssgle:LineSegment
+                    End="43.5,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.5,46"
+                    Point2="47.5,46"
+                    Point3="47.5,50" />
+                  <mssgle:LineSegment
+                    End="47.5,84.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="411,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD"
+          TopLeft="165,299" />
+        <NodeLayout
+          Size="424,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+          TopLeft="170,406" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="370,233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="370.5,341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.5,65"
+              Start="0,0"
+              End="11.5,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="7.5,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,32.5"
+                    Point2="11.5,32.5"
+                    Point3="11.5,36.5" />
+                  <mssgle:LineSegment
+                    End="11.5,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 3]"
+          TopLeft="382,448">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43.5,102"
+              Start="0,0"
+              End="-43.5,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47"
+                    Point2="0,51"
+                    Point3="-4,51" />
+                  <mssgle:LineSegment
+                    End="-39.5,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.5,51"
+                    Point2="-43.5,51"
+                    Point3="-43.5,55" />
+                  <mssgle:LineSegment
+                    End="-43.5,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Stage Tiempo">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Stage Tiempo\Recuento de filas"
+          TopLeft="189,325" />
+        <NodeLayout
+          Size="484,42"
+          Id="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS"
+          TopLeft="83,53" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Stage Tiempo\Columna derivada"
+          TopLeft="125,190" />
+        <NodeLayout
+          Size="377,42"
+          Id="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO"
+          TopLeft="284,475" />
+        <EdgeLayout
+          Id="Package\Stage Tiempo.Paths[Salida de Recuento de filas 1]"
+          TopLeft="271,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="201.5,108"
+              Start="0,0"
+              End="201.5,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50"
+                    Point2="0,54"
+                    Point3="4,54" />
+                  <mssgle:LineSegment
+                    End="197.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="197.5,54"
+                    Point2="201.5,54"
+                    Point3="201.5,58" />
+                  <mssgle:LineSegment
+                    End="201.5,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage Tiempo.Paths[Salida de origen de OLE DB]"
+          TopLeft="325,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116,95"
+              Start="0,0"
+              End="-116,87.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.5"
+                    Point2="0,47.5"
+                    Point3="-4,47.5" />
+                  <mssgle:LineSegment
+                    End="-112,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-112,47.5"
+                    Point2="-116,47.5"
+                    Point3="-116,51.5" />
+                  <mssgle:LineSegment
+                    End="-116,87.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage Tiempo.Paths[Salida de columna derivada]"
+          TopLeft="209,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62,93"
+              Start="0,0"
+              End="62,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.5"
+                    Point2="0,46.5"
+                    Point3="4,46.5" />
+                  <mssgle:LineSegment
+                    End="58,46.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58,46.5"
+                    Point2="62,46.5"
+                    Point3="62,50.5" />
+                  <mssgle:LineSegment
+                    End="62,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Stage Tiempo.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Stage Tiempo.EventHandlers[OnPreExecute]\INSERTAR METADATA"
+          TopLeft="90,70" />
+        <NodeLayout
+          Size="268,42"
+          Id="Package\Stage Tiempo.EventHandlers[OnPreExecute]\SELECCIONAR ULTIMA EJECUCION"
+          TopLeft="220,213" />
+        <EdgeLayout
+          Id="Package\Stage Tiempo.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
+          TopLeft="188.5,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165.5,101"
+              Start="0,0"
+              End="165.5,93.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.5"
+                    Point2="0,50.5"
+                    Point3="4,50.5" />
+                  <mssgle:LineSegment
+                    End="161.5,50.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="161.5,50.5"
+                    Point2="165.5,50.5"
+                    Point3="165.5,54.5" />
+                  <mssgle:LineSegment
+                    End="165.5,93.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Stage Tiempo.EventHandlers[OnPostExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="368,42"
+          Id="Package\Stage Tiempo.EventHandlers[OnPostExecute]\ACTUALIZAR CANTIDAD FILAS CARGADAS METADATA"
+          TopLeft="82,64" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

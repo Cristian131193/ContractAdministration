@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ProyectoDataMart_Stage</Name>
-    <LastWriteTime>2024-07-06T20:26:20.5139126Z</LastWriteTime>
+    <LastWriteTime>2024-07-06T21:32:01.0214851Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -14,6 +14,16 @@
     <ProjectBuildItemInfo>
       <Name>StageGastos.dtsx</Name>
       <LastWriteTime>2024-07-06T20:53:58.0780022Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>StageMetas.dtsx</Name>
+      <LastWriteTime>2024-07-06T21:01:04.8541419Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>StageTiempo.dtsx</Name>
+      <LastWriteTime>2024-07-06T21:32:01.0058581Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
