@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="StageIngresos"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{D1D5D2BE-93DE-448F-A107-D35F91C6F543}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{A8AE44FF-71CF-41E1-81B3-7DAE266E379A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -457,24 +457,12 @@
                       externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[ID]" />
                     <inputColumn
-                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Fecha"
-                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
-                      lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
-                    <inputColumn
                       refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Descrip]"
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Descrip"
                       externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Descrip]" />
-                    <inputColumn
-                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
-                      cachedDataType="cy"
-                      cachedName="Monto"
-                      externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
-                      lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
                     <inputColumn
                       refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
                       cachedDataType="dbTimeStamp"
@@ -495,18 +483,10 @@
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
-                      dataType="dbTimeStamp"
-                      name="Fecha" />
-                    <externalMetadataColumn
                       refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
                       dataType="wstr"
                       length="60"
                       name="Descrip" />
-                    <externalMetadataColumn
-                      refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
-                      dataType="cy"
-                      name="Monto" />
                     <externalMetadataColumn
                       refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
                       dataType="dbTimeStamp"
@@ -570,9 +550,7 @@
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
        [ID]
-      ,[Fecha]
       ,[Descrip]
-      ,[Monto]
 
   FROM [dbo].[INGRESOS]
  
@@ -622,15 +600,6 @@ WHERE ETLExecution = ?</property>
                       name="ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
-                      lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
-                      name="Fecha"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Descrip]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
@@ -640,15 +609,6 @@ WHERE ETLExecution = ?</property>
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Descrip]"
                       name="Descrip"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
-                      dataType="cy"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
-                      lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
-                      name="Monto"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -657,18 +617,10 @@ WHERE ETLExecution = ?</property>
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
-                      dataType="dbTimeStamp"
-                      name="Fecha" />
-                    <externalMetadataColumn
                       refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Descrip]"
                       dataType="wstr"
                       length="60"
                       name="Descrip" />
-                    <externalMetadataColumn
-                      refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
-                      dataType="cy"
-                      name="Monto" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -682,21 +634,11 @@ WHERE ETLExecution = ?</property>
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
                       name="ID" />
                     <outputColumn
-                      refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
-                      name="Fecha" />
-                    <outputColumn
                       refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Descrip]"
                       dataType="wstr"
                       length="60"
                       lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Descrip]"
                       name="Descrip" />
-                    <outputColumn
-                      refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
-                      dataType="cy"
-                      lineageId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
-                      name="Monto" />
                     <outputColumn
                       refId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -796,10 +738,6 @@ WHERE ETLExecution = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153,42"
-          Id="Package\Stage Ingresos"
-          TopLeft="180,311" />
-        <NodeLayout
           Size="318,42"
           Id="Package\ELIMINAR DATAOS TABLA STAGE INGRESOS"
           TopLeft="171,57" />
@@ -807,6 +745,10 @@ WHERE ETLExecution = ?</property>
           Size="424,42"
           Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
           TopLeft="168,191" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Stage Ingresos"
+          TopLeft="180,311" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="330,99">
@@ -1008,7 +950,7 @@ WHERE ETLExecution = ?</property>
     design-time-name="Package\Stage Ingresos.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="197,42"
           Id="Package\Stage Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
@@ -1048,7 +990,9 @@ WHERE ETLExecution = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

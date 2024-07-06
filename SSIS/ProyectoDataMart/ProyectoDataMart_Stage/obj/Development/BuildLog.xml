@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ProyectoDataMart_Stage</Name>
-    <LastWriteTime>2024-07-06T03:12:11.453308Z</LastWriteTime>
+    <LastWriteTime>2024-07-06T20:26:20.5139126Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Stage_Ingresos.dtsx</Name>
-      <LastWriteTime>2024-07-06T03:12:11.4376792Z</LastWriteTime>
+      <Name>StageIngresos.dtsx</Name>
+      <LastWriteTime>2024-07-06T20:58:28.2259627Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>StageIngresos.dtsx</Name>
-      <LastWriteTime>2024-07-06T03:12:11.4220483Z</LastWriteTime>
+      <Name>StageGastos.dtsx</Name>
+      <LastWriteTime>2024-07-06T20:53:58.0780022Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

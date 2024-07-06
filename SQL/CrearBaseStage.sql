@@ -9,9 +9,7 @@ GO
 
 CREATE TABLE INGRESOS(
 	ID INT NOT NULL,
-	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
-	Monto money,
 	ETLLoad datetime,
 	ETLExecution int	
 	)
@@ -20,9 +18,7 @@ GO
 
 CREATE TABLE GASTOS(
 	ID INT NOT NULL,
-	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
-	Monto money,
 	ETLLoad datetime,
 	ETLExecution int	
 	)
@@ -31,12 +27,30 @@ GO
 
 CREATE TABLE METAS(
 	ID INT NOT NULL,
-	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
-	Monto money,
 	ETLLoad datetime,
 	ETLExecution int	
 	)
 GO
 
+CREATE TABLE TIEMPO(
+	FechaID INT NOT NULL,
+	Fecha datetime NULL,
+	Anno nvarchar(4) NULL,
+	Mes nvarchar(2) NULL,
+	Día nvarchar(2) NULL,
+	ETLLoad datetime,
+	ETLExecution int	
+	)
+GO
+
+CREATE TABLE MOVIMIENTOS(
+	ID INT NOT NULL,
+	Tipo nvarchar(6) NULL,
+	FechaID INT NOT NULL,
+	Monto money,
+	ETLLoad datetime,
+	ETLExecution int	
+	)
+GO
 
