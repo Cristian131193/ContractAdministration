@@ -2,18 +2,23 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ProyectoDataMart</Name>
-    <LastWriteTime>2024-07-06T01:31:18.0254998Z</LastWriteTime>
+    <LastWriteTime>2024-07-06T01:36:02.2288567Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>LoadIngresos.dtsx</Name>
-      <LastWriteTime>2024-06-24T00:03:08.9651648Z</LastWriteTime>
+      <LastWriteTime>2024-07-06T01:37:31.6617852Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadGastos.dtsx</Name>
       <LastWriteTime>2024-07-06T01:31:17.8154257Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>LoadMetas.dtsx</Name>
+      <LastWriteTime>2024-07-06T01:36:02.1856527Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

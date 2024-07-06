@@ -1,62 +1,62 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/23/2024 4:29:21 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-C27PBJT"
   DTS:CreatorName="DESKTOP-C27PBJT\cristian"
-  DTS:DTSID="{70E1B578-AF6F-4640-9CAE-9F5F6BFF35C7}"
+  DTS:DTSID="{4E83E3E0-08DB-42FD-8068-ED1497200D87}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5314.0"
   DTS:LocaleID="3082"
-  DTS:ObjectName="LoadIngresos"
+  DTS:ObjectName="LoadMetas"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{3C8D4490-60AD-4EB5-ADE9-27D217E52569}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{889576A0-F50B-4620-A5CA-D2D013F588AA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{F65895F1-C26B-4365-81C4-F73CDD75A907}"
+      DTS:DTSID="{878395AC-9DE1-43CF-9B85-AA840F2BA4DF}"
       DTS:ObjectName="LocalHost.GASTOSPERSONALES">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-LoadIngresos-{F65895F1-C26B-4365-81C4-F73CDD75A907}LocalHost.GASTOSPERSONALES;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-LoadIngresos-{878395AC-9DE1-43CF-9B85-AA840F2BA4DF}LocalHost.GASTOSPERSONALES;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{C5E87F51-DC39-40A0-A478-DB1B3FAA3F4D}"
+      DTS:DTSID="{FAE4E539-2C37-4859-B330-94E5749B91C8}"
       DTS:ObjectName="LocalHost.GASTOSPERSONALES_LOAD">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_LOAD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-LoadIngresos-{C5E87F51-DC39-40A0-A478-DB1B3FAA3F4D}LocalHost.GASTOSPERSONALES_LOAD;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_LOAD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-LoadIngresos-{FAE4E539-2C37-4859-B330-94E5749B91C8}LocalHost.GASTOSPERSONALES_LOAD;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_METADATA]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{C165DFCB-280C-4146-B935-E5E81CED43D9}"
+      DTS:DTSID="{2A6BE7F9-3F39-43BE-989B-81C965662EC3}"
       DTS:ObjectName="LocalHost.GASTOSPERSONALES_METADATA">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-LoadIngresos-{C165DFCB-280C-4146-B935-E5E81CED43D9}LocalHost.GASTOSPERSONALES_METADATA;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-LoadIngresos-{2A6BE7F9-3F39-43BE-989B-81C965662EC3}LocalHost.GASTOSPERSONALES_METADATA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4868F378-9A15-4B74-973E-257050E26450}"
+      DTS:DTSID="{9ADFAEF2-4B66-4219-AF31-817810A755B6}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ETLCountRows">
@@ -65,7 +65,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C0A1A275-233E-4E2D-9106-959645B2CFE3}"
+      DTS:DTSID="{24224B7F-5DA6-46EA-ADD4-7200C788A71A}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ETLExecution">
@@ -75,20 +75,20 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Load Ingresos"
+      DTS:refId="Package\Load Metas"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{BE82460A-3379-43F2-A4A5-60AFE20D20A9}"
+      DTS:DTSID="{C232E05B-7822-4000-B358-1E21D2A070B9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load Ingresos"
+      DTS:ObjectName="Load Metas"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:EventHandlers>
         <DTS:EventHandler
-          DTS:refId="Package\Load Ingresos.EventHandlers[OnPostExecute]"
+          DTS:refId="Package\Load Metas.EventHandlers[OnPostExecute]"
           DTS:CreationName="OnPostExecute"
-          DTS:DTSID="{28739D6D-9B60-45B9-BEF5-2EE0BF1D5A2C}"
+          DTS:DTSID="{C240CF9E-BA64-4FC9-8DEA-720D286264A6}"
           DTS:EventID="-1520136240"
           DTS:EventName="OnPostExecute"
           DTS:LocaleID="-1">
@@ -96,7 +96,7 @@
             <DTS:Variable
               DTS:CreationName=""
               DTS:Description="La propiedad de propagación del evento"
-              DTS:DTSID="{214BFA40-7A73-463F-A8AE-623036E45DE6}"
+              DTS:DTSID="{8B2C9B71-CD7F-4164-8544-75D96AAC6A02}"
               DTS:IncludeInDebugDump="6789"
               DTS:Namespace="System"
               DTS:ObjectName="Propagate">
@@ -106,10 +106,10 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Load Ingresos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Load Metas.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{6F488D23-3439-46AD-BD77-AA4A224A1EB8}"
+              DTS:DTSID="{F663C39A-03E1-43B7-8D1F-D76B0CC336E8}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Tarea Ejecutar SQL"
@@ -117,7 +117,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{C165DFCB-280C-4146-B935-E5E81CED43D9}"
+                  SQLTask:Connection="{2A6BE7F9-3F39-43BE-989B-81C965662EC3}"
                   SQLTask:SqlStatementSource="UPDATE ETLExecution&#xA;SET ETLCountRows=?&#xA;WHERE ID=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ParameterBinding
                     SQLTask:ParameterName="0"
@@ -137,9 +137,9 @@
           </DTS:Executables>
         </DTS:EventHandler>
         <DTS:EventHandler
-          DTS:refId="Package\Load Ingresos.EventHandlers[OnPreExecute]"
+          DTS:refId="Package\Load Metas.EventHandlers[OnPreExecute]"
           DTS:CreationName="OnPreExecute"
-          DTS:DTSID="{83D84970-1043-4BB3-9C9B-7F89FB67C676}"
+          DTS:DTSID="{F4F4F657-2551-41FD-830A-9AF4D8DB0760}"
           DTS:EventID="0"
           DTS:EventName="OnPreExecute"
           DTS:LocaleID="-1">
@@ -147,7 +147,7 @@
             <DTS:Variable
               DTS:CreationName=""
               DTS:Description="La propiedad de propagación del evento"
-              DTS:DTSID="{E1F0F252-98A0-42AF-A3CD-B9B966D10656}"
+              DTS:DTSID="{4A29A621-D467-4F5A-BD52-085B135AC5E1}"
               DTS:IncludeInDebugDump="6789"
               DTS:Namespace="System"
               DTS:ObjectName="Propagate">
@@ -157,10 +157,10 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Load Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
+              DTS:refId="Package\Load Metas.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{e94f3035-8f41-4b18-8bec-4c79bc414a49}"
+              DTS:DTSID="{3DFA3D5D-A9C4-4D17-B3D4-C63B1CF30E6A}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="INSERTAR METADATA"
@@ -168,7 +168,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{C165DFCB-280C-4146-B935-E5E81CED43D9}"
+                  SQLTask:Connection="{2A6BE7F9-3F39-43BE-989B-81C965662EC3}"
                   SQLTask:SqlStatementSource="INSERT INTO ETLExecution(UserName, MachineName, PackageName, ETLLoad)&#xA;                       VALUES(?,?,?,GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ParameterBinding
                     SQLTask:ParameterName="0"
@@ -192,10 +192,10 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Load Ingresos.EventHandlers[OnPreExecute]\SELECT ID METADATA"
+              DTS:refId="Package\Load Metas.EventHandlers[OnPreExecute]\SELECT ID METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{e8da2f31-fedd-4101-9476-edd646d33558}"
+              DTS:DTSID="{13D795FE-630B-4D34-AC4A-8175CCCA4F2F}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="SELECT ID METADATA"
@@ -203,7 +203,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{C165DFCB-280C-4146-B935-E5E81CED43D9}"
+                  SQLTask:Connection="{2A6BE7F9-3F39-43BE-989B-81C965662EC3}"
                   SQLTask:SqlStatementSource="SELECT TOP(1) ID FROM ETLExecution&#xA;WHERE PackageName=?&#xA;ORDER BY ID Desc"
                   SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ResultBinding
@@ -221,13 +221,13 @@
           </DTS:Executables>
           <DTS:PrecedenceConstraints>
             <DTS:PrecedenceConstraint
-              DTS:refId="Package\Load Ingresos.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
+              DTS:refId="Package\Load Metas.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
-              DTS:DTSID="{408701b2-73c7-43b5-b0f2-984dfca7ce0e}"
-              DTS:From="Package\Load Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
+              DTS:DTSID="{F23AE3B4-58E8-4DDF-B903-18C59EF2765D}"
+              DTS:From="Package\Load Metas.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
-              DTS:To="Package\Load Ingresos.EventHandlers[OnPreExecute]\SELECT ID METADATA" />
+              DTS:To="Package\Load Metas.EventHandlers[OnPreExecute]\SELECT ID METADATA" />
           </DTS:PrecedenceConstraints>
         </DTS:EventHandler>
       </DTS:EventHandlers>
@@ -236,7 +236,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL"
+              refId="Package\Load Metas\AGREGAR COLUMNAS ETL"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
@@ -244,7 +244,7 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
+                  refId="Package\Load Metas\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
                   description="Entrada en la transformación Columna derivada"
                   name="Entrada de columna derivada">
                   <externalMetadataColumns />
@@ -252,18 +252,18 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada]"
+                  refId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada]"
                   description="Salida predeterminada de la transformación Columna derivada"
                   exclusionGroup="1"
                   name="Salida de columna derivada"
-                  synchronousInputId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Load Metas\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      refId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      lineageId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
                       name="ETLLoad"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -281,11 +281,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      refId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
                       dataType="i4"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      lineageId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
                       name="ETLExecution"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -306,23 +306,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada]"
+                  refId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada]"
                   description="Salida de error de la transformación Columna derivada"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de columna derivada"
-                  synchronousInputId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Load Metas\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      refId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      lineageId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      refId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      lineageId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -331,11 +331,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS"
+              refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS"
+              name="DESTINO GASTOSPERSONALES_LOAD TABLA METAS"
               usesDispositions="true"
               version="4">
               <properties>
@@ -346,7 +346,7 @@
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[INGRESOS]</property>
+                  name="OpenRowset">[dbo].[METAS]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -388,7 +388,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Connections[OleDbConnection]"
+                  refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -396,75 +396,75 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ID]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[ID]"
                       cachedDataType="i4"
                       cachedName="ID"
-                      externalMetadataColumnId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[ID]" />
+                      externalMetadataColumnId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[ID]" />
                     <inputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Fecha"
-                      externalMetadataColumnId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
+                      externalMetadataColumnId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
                     <inputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Descrip]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Descrip]"
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Descrip"
-                      externalMetadataColumnId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Descrip]" />
+                      externalMetadataColumnId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Descrip]" />
                     <inputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
                       cachedDataType="cy"
                       cachedName="Monto"
-                      externalMetadataColumnId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
+                      externalMetadataColumnId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
                     <inputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
                       cachedDataType="dbTimeStamp"
                       cachedName="ETLLoad"
-                      externalMetadataColumnId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
-                      lineageId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
+                      externalMetadataColumnId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      lineageId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
                     <inputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
                       cachedDataType="i4"
                       cachedName="ETLExecution"
-                      externalMetadataColumnId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
-                      lineageId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
+                      externalMetadataColumnId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      lineageId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
                       dataType="dbTimeStamp"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descrip]"
                       dataType="wstr"
                       length="60"
                       name="Descrip" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       dataType="cy"
                       name="Monto" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
                       dataType="dbTimeStamp"
                       name="ETLLoad" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
                       dataType="i4"
                       name="ETLExecution" />
                   </externalMetadataColumns>
@@ -472,22 +472,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -496,11 +496,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS"
+              refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
               description="Origen de OLE DB"
-              name="ORIGEN GASTOSPERSONALES TABLA INGRESOS"
+              name="ORIGEN GASTOSPERSONALES TABLA METAS"
               usesDispositions="true"
               version="7">
               <properties>
@@ -511,7 +511,7 @@
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[INGRESOS]</property>
+                  name="OpenRowset">[dbo].[METAS]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -545,7 +545,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Connections[OleDbConnection]"
+                  refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -553,104 +553,104 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB]"
+                  refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB]"
                   name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[ID]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[ID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[ID]"
+                      externalMetadataColumnId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[ID]"
                       name="ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      externalMetadataColumnId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
                       name="Fecha"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Descrip]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Descrip]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Descrip]"
+                      externalMetadataColumnId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Descrip]"
                       length="60"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Descrip]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Descrip]"
                       name="Descrip"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
                       dataType="cy"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
+                      externalMetadataColumnId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
                       name="Monto"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
                       dataType="dbTimeStamp"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Descrip]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Descrip]"
                       dataType="wstr"
                       length="60"
                       name="Descrip" />
                     <externalMetadataColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
                       dataType="cy"
                       name="Monto" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB]"
+                  refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
                   name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
                       dataType="i4"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
                       name="ID" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
                       name="Fecha" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Descrip]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[Descrip]"
                       dataType="wstr"
                       length="60"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Descrip]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[Descrip]"
                       name="Descrip" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
                       dataType="cy"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
                       name="Monto" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -659,7 +659,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Ingresos\Recuento de filas"
+              refId="Package\Load Metas\Recuento de filas"
               componentClassID="Microsoft.RowCount"
               contactInfo="Recuento de filas;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Cuenta las filas a medida que pasan por un flujo de datos. Por ejemplo, se usa el número de filas procesadas para determinar si deben o no realizarse operaciones de limpieza o actualizar el texto de un mensaje de correo electrónico para comunicar el estado de procesamiento."
@@ -672,7 +672,7 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Load Ingresos\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
+                  refId="Package\Load Metas\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
                   hasSideEffects="true"
                   name="Entrada de Recuento de filas 1">
                   <externalMetadataColumns />
@@ -680,9 +680,9 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Ingresos\Recuento de filas.Outputs[Salida de Recuento de filas 1]"
+                  refId="Package\Load Metas\Recuento de filas.Outputs[Salida de Recuento de filas 1]"
                   name="Salida de Recuento de filas 1"
-                  synchronousInputId="Package\Load Ingresos\Recuento de filas.Inputs[Entrada de Recuento de filas 1]">
+                  synchronousInputId="Package\Load Metas\Recuento de filas.Inputs[Entrada de Recuento de filas 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -690,20 +690,20 @@
           </components>
           <paths>
             <path
-              refId="Package\Load Ingresos.Paths[Salida de columna derivada]"
-              endId="Package\Load Ingresos\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
+              refId="Package\Load Metas.Paths[Salida de columna derivada]"
+              endId="Package\Load Metas\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
               name="Salida de columna derivada"
-              startId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada]" />
+              startId="Package\Load Metas\AGREGAR COLUMNAS ETL.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\Load Ingresos.Paths[Salida de origen de OLE DB]"
-              endId="Package\Load Ingresos\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
+              refId="Package\Load Metas.Paths[Salida de origen de OLE DB]"
+              endId="Package\Load Metas\AGREGAR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
               name="Salida de origen de OLE DB"
-              startId="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS.Outputs[Salida de origen de OLE DB]" />
+              startId="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\Load Ingresos.Paths[Salida de Recuento de filas 1]"
-              endId="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS.Inputs[Entrada de destino de OLE DB]"
+              refId="Package\Load Metas.Paths[Salida de Recuento de filas 1]"
+              endId="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS.Inputs[Entrada de destino de OLE DB]"
               name="Salida de Recuento de filas 1"
-              startId="Package\Load Ingresos\Recuento de filas.Outputs[Salida de Recuento de filas 1]" />
+              startId="Package\Load Metas\Recuento de filas.Outputs[Salida de Recuento de filas 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -722,42 +722,42 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="149,42"
-          Id="Package\Load Ingresos"
+          Size="136,42"
+          Id="Package\Load Metas"
           TopLeft="51,45" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load Ingresos">
+    design-time-name="Package\Load Metas">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="164,42"
-          Id="Package\Load Ingresos\Recuento de filas"
+          Id="Package\Load Metas\Recuento de filas"
           TopLeft="513,268" />
         <NodeLayout
           Size="222,42"
-          Id="Package\Load Ingresos\AGREGAR COLUMNAS ETL"
+          Id="Package\Load Metas\AGREGAR COLUMNAS ETL"
           TopLeft="333,156" />
         <NodeLayout
-          Size="345,42"
-          Id="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS"
+          Size="324,42"
+          Id="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS"
           TopLeft="67,25" />
         <NodeLayout
-          Size="386,42"
-          Id="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS"
+          Size="366,42"
+          Id="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS"
           TopLeft="567,406" />
         <EdgeLayout
-          Id="Package\Load Ingresos.Paths[Salida de Recuento de filas 1]"
+          Id="Package\Load Metas.Paths[Salida de Recuento de filas 1]"
           TopLeft="595,310">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="165,96"
+              EndConnector="155,96"
               Start="0,0"
-              End="165,88.5">
+              End="155,88.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -768,13 +768,13 @@
                     Point2="0,48"
                     Point3="4,48" />
                   <mssgle:LineSegment
-                    End="161,48" />
+                    End="151,48" />
                   <mssgle:CubicBezierSegment
-                    Point1="161,48"
-                    Point2="165,48"
-                    Point3="165,52" />
+                    Point1="151,48"
+                    Point2="155,48"
+                    Point3="155,52" />
                   <mssgle:LineSegment
-                    End="165,88.5" />
+                    End="155,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -784,14 +784,14 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Ingresos.Paths[Salida de origen de OLE DB]"
-          TopLeft="239.5,67">
+          Id="Package\Load Metas.Paths[Salida de origen de OLE DB]"
+          TopLeft="229,67">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="204.5,89"
+              EndConnector="215,89"
               Start="0,0"
-              End="204.5,81.5">
+              End="215,81.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -802,13 +802,13 @@
                     Point2="0,44.5"
                     Point3="4,44.5" />
                   <mssgle:LineSegment
-                    End="200.5,44.5" />
+                    End="211,44.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="200.5,44.5"
-                    Point2="204.5,44.5"
-                    Point3="204.5,48.5" />
+                    Point1="211,44.5"
+                    Point2="215,44.5"
+                    Point3="215,48.5" />
                   <mssgle:LineSegment
-                    End="204.5,81.5" />
+                    End="215,81.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -818,7 +818,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Ingresos.Paths[Salida de columna derivada]"
+          Id="Package\Load Metas.Paths[Salida de columna derivada]"
           TopLeft="444,198">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -855,20 +855,20 @@
     </LayoutInfo>
   </TaskHost>
   <DtsEventHandler
-    design-time-name="Package\Load Ingresos.EventHandlers[OnPreExecute]">
+    design-time-name="Package\Load Metas.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="197,42"
-          Id="Package\Load Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
+          Id="Package\Load Metas.EventHandlers[OnPreExecute]\INSERTAR METADATA"
           TopLeft="60,60" />
         <NodeLayout
           Size="199,42"
-          Id="Package\Load Ingresos.EventHandlers[OnPreExecute]\SELECT ID METADATA"
+          Id="Package\Load Metas.EventHandlers[OnPreExecute]\SELECT ID METADATA"
           TopLeft="247,179" />
         <EdgeLayout
-          Id="Package\Load Ingresos.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
+          Id="Package\Load Metas.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
           TopLeft="158.5,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -907,19 +907,19 @@
     </LayoutInfo>
   </DtsEventHandler>
   <DtsEventHandler
-    design-time-name="Package\Load Ingresos.EventHandlers[OnPostExecute]">
+    design-time-name="Package\Load Metas.EventHandlers[OnPostExecute]">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="176,42"
-          Id="Package\Load Ingresos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+          Id="Package\Load Metas.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
           TopLeft="104,41" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Ingresos\ORIGEN GASTOSPERSONALES TABLA INGRESOS">
+    design-time-name="Package\Load Metas\ORIGEN GASTOSPERSONALES TABLA METAS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -932,7 +932,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Ingresos\DESTINO GASTOSPERSONALES_LOAD TABLA INGRESOS">
+    design-time-name="Package\Load Metas\DESTINO GASTOSPERSONALES_LOAD TABLA METAS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
