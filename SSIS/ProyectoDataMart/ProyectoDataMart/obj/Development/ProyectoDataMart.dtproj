@@ -26,13 +26,14 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-C27PBJT</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYR5EKfW9zkqu+2enj0dJTAAAAAACAAAAAAAQZgAAAAEAACAAAACdJS5PhWqL/whxn8Mf89XbzhhOKNmmttBETToBh4kQwgAAAAAOgAAAAAIAACAAAABlBBdxfrAAslIE5tdLHfrjiErlgVRCLnTgX8e52Y4InpAAAAAyWvL8qaNzW8kpM4SpEuuuKXLCckKDviwEQyBcpzCF9VYZyXXAMy0C7wupprSO1WL4m+rOPO/VLdMOxqbcgyRCtIhKI7C13n/GV62C8pjEnqE4napGLd/fqrNf8UxF9tVZsZrKaHiOMrcCKRDv5bzKyDOyc/Z2DMSC2wg909ap/igFVxLcKogaWxRyJIKt0K1AAAAAkXM7ifGI3IEVrT2sIRzzAA0oEhS12BOjSBJnxwYkWXYNvrou6RU0s34ys6PvOj+WB8yxE/zM9cjlC0cn4a1uaA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYR5EKfW9zkqu+2enj0dJTAAAAAACAAAAAAAQZgAAAAEAACAAAADumOIiQfP4ScxGrctqYhO+R2qpL9eitWq3QqU+QlN6hwAAAAAOgAAAAAIAACAAAAAFrB5IQD1V5/kUbG3CPbkczeVJ76hlERqqcnxnhJqMY5AAAAATtgeOIdntgo/Kf18IsQ/7Z0W1wXGfecti1SOSmmGfxtVSKVfBKAzsEFPQo6bTuITwj/cfQ7Mc7hsJYTK6Xt5akW0KdSBA/1mdDuDUQpVYfyZTwgRvNNelvVww91w58pW2VZzBWm683A9gdb8VwV46C0QN1LGOzlk4thSVtE4+to87DkwQTgOCGMEPGLSaj1ZAAAAA3dTRbidz7Q145lyl5ZyabtfCpCiw7aJrimlMhfD8cin45DckpGWpzt7PzuZn80uxpAfLN7Q7kxT2toycHk8krw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="LoadIngresos.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="LoadGastos.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="LoadMetas.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="LoadMaster.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -1423,6 +1424,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="LoadMaster.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{14458FC8-BE0D-4E3E-9336-C8D6D7064244}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">LoadMaster</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6DCC016C-0450-4A2C-95A3-CB94B2EDB80D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
