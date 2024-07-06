@@ -8,7 +8,7 @@ USE GASTOSPERSONALES_STAGE
 GO
 
 CREATE TABLE INGRESOS(
-	ID INT IDENTITY(1,1) NOT NULL,
+	ID INT NOT NULL,
 	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
 	Monto money,
@@ -19,7 +19,7 @@ GO
 
 
 CREATE TABLE GASTOS(
-	ID INT IDENTITY(1,1) NOT NULL,
+	ID INT NOT NULL,
 	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
 	Monto money,
@@ -30,7 +30,7 @@ GO
 
 
 CREATE TABLE METAS(
-	ID INT IDENTITY(1,1) NOT NULL,
+	ID INT NOT NULL,
 	Fecha datetime NULL,
 	Descrip nvarchar(60) NULL,
 	Monto money,
@@ -38,7 +38,5 @@ CREATE TABLE METAS(
 	ETLExecution int	
 	)
 GO
-
-
 
 
