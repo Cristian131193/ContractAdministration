@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-C27PBJT</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYR5EKfW9zkqu+2enj0dJTAAAAAACAAAAAAAQZgAAAAEAACAAAAAHbMfagCBVA9IGv6bn7Np0fRd7ARKiVg/wdB9hudKreQAAAAAOgAAAAAIAACAAAADIKeb8s1bWMjnqeDbmO9Ebl79VKQ/new6BqJDKeVKFK5AAAADef0ngqkllD4ZXVJRudoRNpghULXzaezK4gwrD7c4kTdeudpeAETFeg/ILidWinGBej/avZrN7g43NFj89qdZSeu5Ct8I0F5hwNTrEd+LeO75YUPS5fHUzWUbojvlJ7VmJCSt9YO/6ecplk/k/ftYTij7fMfpd0S5sSoIUGaXUsmcQGR1FWHLStB+7k+uApQpAAAAAyNGERWtUawF/w2yWquypo24Og/dZn7K60YhCjN1Noh5mBdsM6S20H/7ZFNB4KaoXykJkhGGCcRdqryi+serN/g==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYR5EKfW9zkqu+2enj0dJTAAAAAACAAAAAAAQZgAAAAEAACAAAADjc4LftNPAB/w1e2laXQ9htZtODu9j8EoSDW5X3w2sKQAAAAAOgAAAAAIAACAAAADrNj7s+LBmaTMSn7iyJC96I0ThVK18yin8kDGPFg6vJpAAAACEfeahO0sH8Wte0DR810BD65P58Zl6Ti6dhkzS94GnIjAzAYJqrRTas0tTQY7pWOAxklRmPGq4Qpz7qwLSGTw4dDatVuo3T8CVYQfgLbIq75GSzCqwSkLl2ECGZCLSRQ4MaWwVCO52aGHVpOLJ3Wf5Mj5PX8q1karRxqBc9dxw7Tfrz+4ElaJ7MRCwDtzeR59AAAAAW/aLm0b6d+pBDb4jMxtAdiaYygspbYq8EXBqYF/qgrmmSWA8ftrS3X+wgOxVDfqGG0Lc8iHYIVrfkHReoL+b9A==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,6 +35,7 @@
           <SSIS:Package SSIS:Name="StageMetas.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="StageTiempo.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="StageMovimientos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="StageMaster.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -1894,10 +1895,10 @@
                 <SSIS:Property SSIS:Name="Name">StageMovimientos</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{425C13C0-6F8A-4C9E-A117-56650B270771}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3C46B8C0-2382-48B5-84A6-E9209D9E5ECB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2349,6 +2350,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="StageMaster.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E2C1BFF0-BC68-4E17-9C46-91CB0DE6D5CE}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">StageMaster</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B1FBEBA4-C477-46C3-9102-6D0B5D208333}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
