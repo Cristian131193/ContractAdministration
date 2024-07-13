@@ -7,6 +7,8 @@ Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ProyectoDataMart_LOAD", "Pr
 EndProject
 Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ProyectoDataMart_Stage", "ProyectoDataMart_Stage\ProyectoDataMart_Stage.dtproj", "{39EC898A-8F14-41B7-ACF6-DBC92C8E1F3F}"
 EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ProyectoDataMart_Datamart", "ProyectoDataMart_Datamart\ProyectoDataMart_Datamart.dtproj", "{8E3ADC87-2C83-446C-A77A-71AC865AF307}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -16,6 +18,8 @@ Global
 		{0219DD59-B582-4C67-A034-5E2629EC954E}.Development|Default.Build.0 = Development
 		{39EC898A-8F14-41B7-ACF6-DBC92C8E1F3F}.Development|Default.ActiveCfg = Development
 		{39EC898A-8F14-41B7-ACF6-DBC92C8E1F3F}.Development|Default.Build.0 = Development
+		{8E3ADC87-2C83-446C-A77A-71AC865AF307}.Development|Default.ActiveCfg = Development
+		{8E3ADC87-2C83-446C-A77A-71AC865AF307}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

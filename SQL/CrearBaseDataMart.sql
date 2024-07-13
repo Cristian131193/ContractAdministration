@@ -1,0 +1,149 @@
+USE master
+GO
+
+CREATE DATABASE GASTOSPERSONALES_DATAMART
+GO
+
+USE GASTOSPERSONALES_DATAMART
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim_Gastos](
+	[Gastos_SK] [int] IDENTITY(1,1) NOT NULL,
+	[Gastos_BK] [int] NOT NULL,
+	[Gastos_Descrip] [nvarchar](60) NULL,
+	CONSTRAINT [PK_Dim_Gastos] PRIMARY KEY CLUSTERED
+	(
+		[Gastos_SK] ASC
+	)WITH (PAD_INDEX=OFF, STATISTICS_NORECOMPUTE=OFF, IGNORE_DUP_KEY=OFF, ALLOW_ROW_LOCKS=ON, ALLOW_PAGE_LOCKS=ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim_Ingresos](
+	[Ingresos_SK] [int] IDENTITY(1,1) NOT NULL,
+	[Ingresos_BK] [int] NOT NULL,
+	[Ingresos_Descrip] [nvarchar](60) NULL,
+	CONSTRAINT [PK_Dim_Ingresos] PRIMARY KEY CLUSTERED
+	(
+		[Ingresos_SK] ASC
+	)WITH (PAD_INDEX=OFF, STATISTICS_NORECOMPUTE=OFF, IGNORE_DUP_KEY=OFF, ALLOW_ROW_LOCKS=ON, ALLOW_PAGE_LOCKS=ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim_Metas](
+	[Metas_SK] [int] IDENTITY(1,1) NOT NULL,
+	[Metas_BK] [int] NOT NULL,
+	[Metas_Descrip] [nvarchar](60) NULL,
+	CONSTRAINT [PK_Dim_Metas] PRIMARY KEY CLUSTERED
+	(
+		[Metas_SK] ASC
+	)WITH (PAD_INDEX=OFF, STATISTICS_NORECOMPUTE=OFF, IGNORE_DUP_KEY=OFF, ALLOW_ROW_LOCKS=ON, ALLOW_PAGE_LOCKS=ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim_Tiempo](
+	[Tiempo_SK] [int] IDENTITY(1,1) NOT NULL,
+	[Fecha_BK] [datetime] NOT NULL,
+	[Tiempo_Anno] [nvarchar](4) NULL,
+	[Tiempo_Mes] [nvarchar](2) NULL,
+	[Tiempo_Dia] [nvarchar](2) NULL,
+	CONSTRAINT [PK_Dim_Tiempo] PRIMARY KEY CLUSTERED
+	(
+		[Tiempo_SK] ASC
+	)WITH (PAD_INDEX=OFF, STATISTICS_NORECOMPUTE=OFF, IGNORE_DUP_KEY=OFF, ALLOW_ROW_LOCKS=ON, ALLOW_PAGE_LOCKS=ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Fact_Movimientos](
+	[ID_SK] [int] NOT NULL,
+	[Tiempo_SK] [int] NOT NULL,
+	[Movimientos_Tipo] [nvarchar](6) NOT NULL,
+	[Movimientos_Monto] [money] NULL,
+	CONSTRAINT [PK_Fact_Movimiento] PRIMARY KEY CLUSTERED
+	(
+		[ID_SK] ASC,
+		[Tiempo_SK] ASC,
+		[Movimientos_Tipo] ASC
+		
+	)WITH (PAD_INDEX=OFF, STATISTICS_NORECOMPUTE=OFF, IGNORE_DUP_KEY=OFF, ALLOW_ROW_LOCKS=ON, ALLOW_PAGE_LOCKS=ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Fact_Movimientos] WITH CHECK ADD CONSTRAINT [FK_Fact_Movimientos_Dim_Tiempo] FOREIGN KEY([Tiempo_SK])
+REFERENCES [dbo].[Dim_Tiempo] ([Tiempo_SK])
+GO
+
+ALTER TABLE [dbo].[Fact_Movimientos] CHECK CONSTRAINT [FK_Fact_Movimientos_Dim_Tiempo]
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
