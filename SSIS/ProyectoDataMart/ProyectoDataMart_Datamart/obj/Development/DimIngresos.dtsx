@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimIngresos"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{1B0EE806-F655-467D-A4DC-86CB0C1DADCC}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{8B4E6B1D-8995-4A17-9957-A1578FA12886}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2648,7 +2648,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[Dim_Gastos]</property>
+                  name="OpenRowset">[dbo].[Dim_Ingresos]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -2709,31 +2709,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="i4"
                       cachedName="ID"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gastos_BK]"
+                      externalMetadataColumnId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Ingresos_BK]"
                       lineageId="Package\Dim Ingresos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID]" />
                     <inputColumn
                       refId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Descrip]"
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Descrip"
-                      externalMetadataColumnId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gastos_Descrip]"
+                      externalMetadataColumnId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Ingresos_Descrip]"
                       lineageId="Package\Dim Ingresos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Descrip]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gastos_SK]"
+                      refId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Ingresos_SK]"
                       dataType="i4"
-                      name="Gastos_SK" />
+                      name="Ingresos_SK" />
                     <externalMetadataColumn
-                      refId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gastos_BK]"
+                      refId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Ingresos_BK]"
                       dataType="i4"
-                      name="Gastos_BK" />
+                      name="Ingresos_BK" />
                     <externalMetadataColumn
-                      refId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gastos_Descrip]"
+                      refId="Package\Dim Ingresos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Ingresos_Descrip]"
                       dataType="wstr"
                       length="60"
-                      name="Gastos_Descrip" />
+                      name="Ingresos_Descrip" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3435,6 +3435,10 @@ ORDER BY [ID]</property>
           Id="Package\Dim Ingresos\Origen Datamart Ingresos"
           TopLeft="437,55" />
         <NodeLayout
+          Size="196,42"
+          Id="Package\Dim Ingresos\Combinación de mezcla"
+          TopLeft="267,316" />
+        <NodeLayout
           Size="189,42"
           Id="Package\Dim Ingresos\Origen Stage Ingresos"
           TopLeft="106,55" />
@@ -3484,6 +3488,74 @@ ORDER BY [ID]</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dim Ingresos.Paths[Salida 01]"
+          TopLeft="538.5,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-142.166666666667,81"
+              Start="0,0"
+              End="-142.166666666667,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2064777327935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.2064777327935"
+                    Point2="0,48.2064777327935"
+                    Point3="-4,48.2064777327935" />
+                  <mssgle:LineSegment
+                    End="-138.166666666667,48.2064777327935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-138.166666666667,48.2064777327935"
+                    Point2="-142.166666666667,48.2064777327935"
+                    Point3="-142.166666666667,52.2064777327935" />
+                  <mssgle:LineSegment
+                    End="-142.166666666667,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dim Ingresos.Paths[Salida 0]"
+          TopLeft="191,233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="174,83"
+              Start="0,0"
+              End="174,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5"
+                    Point2="0,41.5"
+                    Point3="4,41.5" />
+                  <mssgle:LineSegment
+                    End="170,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="170,41.5"
+                    Point2="174,41.5"
+                    Point3="174,45.5" />
+                  <mssgle:LineSegment
+                    End="174,75.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3656,78 +3728,6 @@ ORDER BY [ID]</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,88.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Dim Ingresos\Combinación de mezcla"
-          TopLeft="267,316" />
-        <EdgeLayout
-          Id="Package\Dim Ingresos.Paths[Salida 0]"
-          TopLeft="191,233">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="174,83"
-              Start="0,0"
-              End="174,75.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.5"
-                    Point2="0,41.5"
-                    Point3="4,41.5" />
-                  <mssgle:LineSegment
-                    End="170,41.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="170,41.5"
-                    Point2="174,41.5"
-                    Point3="174,45.5" />
-                  <mssgle:LineSegment
-                    End="174,75.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Dim Ingresos.Paths[Salida 01]"
-          TopLeft="538.5,235">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-142.166666666667,81"
-              Start="0,0"
-              End="-142.166666666667,73.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.2064777327935" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.2064777327935"
-                    Point2="0,48.2064777327935"
-                    Point3="-4,48.2064777327935" />
-                  <mssgle:LineSegment
-                    End="-138.166666666667,48.2064777327935" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-138.166666666667,48.2064777327935"
-                    Point2="-142.166666666667,48.2064777327935"
-                    Point3="-142.166666666667,52.2064777327935" />
-                  <mssgle:LineSegment
-                    End="-142.166666666667,73.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

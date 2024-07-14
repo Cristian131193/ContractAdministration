@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimGastos"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{A64F91B2-5128-45CD-9C0B-1E18C876C4E1}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{BFF47443-B6B7-4E59-B838-FBBD06CB930D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
