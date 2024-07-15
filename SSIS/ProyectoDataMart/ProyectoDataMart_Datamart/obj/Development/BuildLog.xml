@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ProyectoDataMart_Datamart</Name>
-    <LastWriteTime>2024-07-14T22:05:41.6143845Z</LastWriteTime>
+    <LastWriteTime>2024-07-15T01:09:51.0746248Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -19,6 +19,11 @@
     <ProjectBuildItemInfo>
       <Name>DimMetas.dtsx</Name>
       <LastWriteTime>2024-07-14T23:15:21.1777389Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimTiempo.dtsx</Name>
+      <LastWriteTime>2024-07-15T01:09:50.7695904Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
