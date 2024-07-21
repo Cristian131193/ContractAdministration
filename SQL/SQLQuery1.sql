@@ -1,3 +1,7 @@
+use GASTOSPERSONALES_STAGE
+GO
+
+
 CREATE TABLE [GASTOSPERSONALES_STAGE].[dbo].[Dim_Gastos_Mod](
 	[Gastos_MOd_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Gastos_BK] [int] NOT NULL,
@@ -35,6 +39,24 @@ CREATE TABLE [GASTOSPERSONALES_STAGE].[dbo].[Dim_Tiempo_Mod](
 	[ETLLoad] datetime
 )
 GO
+
+
+
+CREATE TABLE [GASTOSPERSONALES_STAGE].[dbo].[Fact_Movimientos](
+	[Movimientos_MOd_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ID_SK] [int] NOT NULL,
+	[Tiempo_SK] [int] NOT NULL,
+	[Movimientos_Tipo] [nvarchar](6) NOT NULL,
+	[Movimientos_Monto] [money] NULL,
+	[ETLLoad] datetime
+)
+GO
+
+
+
+
+
+
 
 
 
