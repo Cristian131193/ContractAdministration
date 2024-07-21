@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-C27PBJT</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYR5EKfW9zkqu+2enj0dJTAAAAAACAAAAAAAQZgAAAAEAACAAAAAD/sJbXa+m/mXaKI3IPmE+EicrGmvJQ1/b3oUwESdNjAAAAAAOgAAAAAIAACAAAADnhAB0kOcixVYQ+6eqWsXi0oYlivdyXnTJYBGdLhcm9JAAAAAUctQMfGfNQ8OtyfBzSfvPZAXZR2DC4lDU58dhasU/3jVJo5/APBJNZyaPuzN1ZuvaSdgcz+DAGpIKZ/oG0oVgx27Vd0YGX5Kxh1+EQgt89vD2W/JjqPoaV+cGxUNrd1m7m/jpBw9q9Tm5RWfGXID0xMAwjv8C7wVMIN6OUNBB7vc61rhxXpZIXTHwuwSvQaZAAAAAayinOdrwmmZAbKF/oviz9VP5Wl+lUplXOoCnxek+I/sC7TaB+9gQyNDpcGTC8xQNGww7Y5Uypmx6LmJh1Wz1oQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYR5EKfW9zkqu+2enj0dJTAAAAAACAAAAAAAQZgAAAAEAACAAAABBCrs+HDyVRY6yyzDYM77vaqqP5ZBDw2eVXLCmA5FiagAAAAAOgAAAAAIAACAAAAA1Exl1Q5kZcUoQV8hEqd7U28nx+GKynBIQrHbcHcDqCZAAAACmkknFORdjKmaokdLVlsZ3ZqIX6uTLiPexPyy2nraFI8gqyms1ZpcYXXXEA0lLTnA/JRxIPLwvU9iqc3HYopYvU4ZQ7yX3bRmnDs/xJBihUvGnT9gKjZo33GZnbcZz5yRcs8Ei4/ZvcuIWLFJGRXN89CXsiHYLzksZ4J6kfU2AIdm15zY+Lnfe1VvtQ3UyDlZAAAAACwRsAZMrjo6UZWlobv2+riUNhjuYnuGK5GKA9961PnNrmcqQ8RPRGmT0AGcQlaDEgIX0AlUwJCwSk95s7Oaxvw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,6 +35,7 @@
           <SSIS:Package SSIS:Name="DimMetas.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DimTiempo.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactMovimientos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DataMart Master.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -2486,10 +2487,10 @@
                 <SSIS:Property SSIS:Name="Name">FactMovimientos</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">48</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">49</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{91C26AE0-5075-4542-8E88-3DF28A1527C6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{834923C8-14B6-4B77-B34D-737F2D2BA8D6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3089,6 +3090,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DataMart Master.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{AA2E5090-7B1E-4C4E-8F1B-99AC600AA8E9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DataMart Master</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{93623A00-FF0D-4254-829B-AFB218FF7CC1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

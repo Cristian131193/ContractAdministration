@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ProyectoDataMart_Datamart</Name>
-    <LastWriteTime>2024-07-21T22:14:52.2887011Z</LastWriteTime>
+    <LastWriteTime>2024-07-21T22:25:16.7662435Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -29,6 +29,11 @@
     <ProjectBuildItemInfo>
       <Name>FactMovimientos.dtsx</Name>
       <LastWriteTime>2024-07-21T22:19:09.8333795Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DataMart Master.dtsx</Name>
+      <LastWriteTime>2024-07-21T22:25:16.7412441Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
