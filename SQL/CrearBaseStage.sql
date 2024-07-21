@@ -44,10 +44,15 @@ CREATE TABLE TIEMPO(
 	)
 GO
 
+
+DROP TABLE MOVIMIENTOS
+
+
+
 CREATE TABLE MOVIMIENTOS(
 	ID INT NOT NULL,
 	Tipo nvarchar(6) NULL,
-	FechaID INT NOT NULL,
+	Fecha datetime NOT NULL,
 	Monto money,
 	ETLLoad datetime,
 	ETLExecution int	

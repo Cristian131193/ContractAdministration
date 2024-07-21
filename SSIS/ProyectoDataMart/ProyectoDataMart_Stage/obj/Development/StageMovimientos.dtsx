@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="StageMovimientos"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{425C13C0-6F8A-4C9E-A117-56650B270771}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{9F06E0FD-499A-468C-967D-A545C71316EE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -479,10 +479,10 @@
                       cachedName="Monto"
                       lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
                     <inputColumn
-                      refId="Package\Stage Movimientos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[FechaID]"
-                      cachedDataType="i4"
-                      cachedName="FechaID"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[FechaID]" />
+                      refId="Package\Stage Movimientos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Fecha]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Fecha"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -556,19 +556,19 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of FechaID]"
-                      dataType="i4"
+                      refId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Fecha]"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of FechaID]"
-                      name="Copy of FechaID"
+                      lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Fecha]"
+                      name="Copy of Fecha"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[FechaID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -700,17 +700,17 @@
                       externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tipo]"
                       lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of TIPO]" />
                     <inputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Copy of FechaID]"
-                      cachedDataType="i4"
-                      cachedName="Copy of FechaID"
-                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaID]"
-                      lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of FechaID]" />
-                    <inputColumn
                       refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Copy of Monto]"
                       cachedDataType="cy"
                       cachedName="Copy of Monto"
                       externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Monto]" />
+                    <inputColumn
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Copy of Fecha]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of Fecha"
+                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Fecha]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -732,13 +732,13 @@
                       length="6"
                       name="Tipo" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaID]"
-                      dataType="i4"
-                      name="FechaID" />
-                    <externalMetadataColumn
                       refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       dataType="cy"
                       name="Monto" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      dataType="dbTimeStamp"
+                      name="Fecha" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -792,7 +792,7 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT ID, 'GASTOS' AS TIPO, Monto, B.FechaID
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT ID, 'GASTOS' AS TIPO, Monto, B.Fecha
 FROM [GASTOSPERSONALES_LOAD].[dbo].[GASTOS] A
 INNER JOIN [GASTOSPERSONALES_STAGE].[dbo].[TIEMPO] B
 ON A.Fecha = B.Fecha
@@ -800,7 +800,7 @@ WHERE A.ETLExecution = ?
 
 UNION 
 
-SELECT DISTINCT ID, 'INGRES' AS TIPO, Monto, B.FechaID
+SELECT DISTINCT ID, 'INGRES' AS TIPO, Monto, B.Fecha
 FROM [GASTOSPERSONALES_LOAD].[dbo].[INGRESOS] A
 INNER JOIN [GASTOSPERSONALES_STAGE].[dbo].[TIEMPO] B
 ON A.Fecha = B.Fecha
@@ -808,7 +808,7 @@ WHERE A.ETLExecution = ?
 
 UNION 
 
-SELECT DISTINCT ID, 'METAS' AS TIPO, Monto, B.FechaID
+SELECT DISTINCT ID, 'METAS' AS TIPO, Monto, B.Fecha
 FROM [GASTOSPERSONALES_LOAD].[dbo].[METAS] A
 INNER JOIN [GASTOSPERSONALES_STAGE].[dbo].[TIEMPO] B
 ON A.Fecha = B.Fecha
@@ -878,13 +878,13 @@ WHERE A.ETLExecution = ?</property>
                       name="Monto"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[FechaID]"
-                      dataType="i4"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[FechaID]"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[FechaID]"
-                      name="FechaID"
+                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      name="Fecha"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -904,9 +904,9 @@ WHERE A.ETLExecution = ?</property>
                       dataType="cy"
                       name="Monto" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[FechaID]"
-                      dataType="i4"
-                      name="FechaID" />
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      dataType="dbTimeStamp"
+                      name="Fecha" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -932,10 +932,10 @@ WHERE A.ETLExecution = ?</property>
                       lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
                       name="Monto" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[FechaID]"
-                      dataType="i4"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[FechaID]"
-                      name="FechaID" />
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      name="Fecha" />
                     <outputColumn
                       refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -1064,6 +1064,14 @@ WHERE A.ETLExecution = ?</property>
           Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD"
           TopLeft="115,196" />
         <NodeLayout
+          Size="424,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+          TopLeft="112,296" />
+        <NodeLayout
+          Size="403,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD"
+          TopLeft="110,402" />
+        <NodeLayout
           Size="173,42"
           Id="Package\Stage Movimientos"
           TopLeft="245,572" />
@@ -1101,14 +1109,6 @@ WHERE A.ETLExecution = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="424,42"
-          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
-          TopLeft="112,296" />
-        <NodeLayout
-          Size="403,42"
-          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD"
-          TopLeft="110,402" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="322.25,238">
@@ -1208,6 +1208,14 @@ WHERE A.ETLExecution = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="180,42"
+          Id="Package\Stage Movimientos\Conversión de datos"
+          TopLeft="271,154" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Stage Movimientos\Columna derivada"
+          TopLeft="279,292" />
+        <NodeLayout
           Size="164,42"
           Id="Package\Stage Movimientos\Recuento de filas"
           TopLeft="283,429" />
@@ -1216,27 +1224,23 @@ WHERE A.ETLExecution = ?</property>
           Id="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS"
           TopLeft="188,18" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Stage Movimientos\Columna derivada"
-          TopLeft="279,292" />
-        <NodeLayout
           Size="373,42"
           Id="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS"
           TopLeft="185,552" />
         <EdgeLayout
-          Id="Package\Stage Movimientos.Paths[Salida de Recuento de filas 1]"
-          TopLeft="368.25,471">
+          Id="Package\Stage Movimientos.Paths[Salida de conversión de datos]"
+          TopLeft="362,196">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,81"
+              EndConnector="0,96"
               Start="0,0"
-              End="0,73.5">
+              End="0,88.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.5" />
+                    End="0,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1267,10 +1271,28 @@ WHERE A.ETLExecution = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Stage Movimientos\Conversión de datos"
-          TopLeft="271,154" />
+        <EdgeLayout
+          Id="Package\Stage Movimientos.Paths[Salida de Recuento de filas 1]"
+          TopLeft="368.25,471">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,81"
+              Start="0,0"
+              End="0,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Movimientos.Paths[Salida de origen de OLE DB]"
           TopLeft="364.5,60">
@@ -1285,28 +1307,6 @@ WHERE A.ETLExecution = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,86.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stage Movimientos.Paths[Salida de conversión de datos]"
-          TopLeft="362,196">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,96"
-              Start="0,0"
-              End="0,88.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

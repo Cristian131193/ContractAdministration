@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="StageTiempo"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{C36CEA91-25C9-4621-A4DB-C6FC9629CB31}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{25A79B40-CAB7-43F7-8213-C8669B69C87E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -916,6 +916,14 @@ WHERE ETLExecution = ?</property>
           Id="Package\ELIMINAR DATAOS TABLA STAGE TIEMPO"
           TopLeft="171,57" />
         <NodeLayout
+          Size="411,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD"
+          TopLeft="165,299" />
+        <NodeLayout
+          Size="424,42"
+          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
+          TopLeft="170,406" />
+        <NodeLayout
           Size="403,42"
           Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA METAS LOAD"
           TopLeft="168,191" />
@@ -957,14 +965,6 @@ WHERE ETLExecution = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="411,42"
-          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA GASTOS LOAD"
-          TopLeft="165,299" />
-        <NodeLayout
-          Size="424,42"
-          Id="Package\SELECCIONAR ULTIMO ETLExecution DE TABLA INGRESOS LOAD"
-          TopLeft="170,406" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="370,233">
@@ -1064,10 +1064,6 @@ WHERE ETLExecution = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42"
-          Id="Package\Stage Tiempo\Recuento de filas"
-          TopLeft="189,325" />
-        <NodeLayout
           Size="484,42"
           Id="Package\Stage Tiempo\ORIGEN GASTOSPERSONALES_LOAD TABLAS INGRESOS, GASTOS, METAS"
           TopLeft="83,53" />
@@ -1076,43 +1072,13 @@ WHERE ETLExecution = ?</property>
           Id="Package\Stage Tiempo\Columna derivada"
           TopLeft="125,190" />
         <NodeLayout
+          Size="164,42"
+          Id="Package\Stage Tiempo\Recuento de filas"
+          TopLeft="189,325" />
+        <NodeLayout
           Size="377,42"
           Id="Package\Stage Tiempo\DESTINO GASTOSPERSONALES_STAGE TABLA TIEMPO"
           TopLeft="284,475" />
-        <EdgeLayout
-          Id="Package\Stage Tiempo.Paths[Salida de Recuento de filas 1]"
-          TopLeft="271,367">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="201.5,108"
-              Start="0,0"
-              End="201.5,100.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50"
-                    Point2="0,54"
-                    Point3="4,54" />
-                  <mssgle:LineSegment
-                    End="197.5,54" />
-                  <mssgle:CubicBezierSegment
-                    Point1="197.5,54"
-                    Point2="201.5,54"
-                    Point3="201.5,58" />
-                  <mssgle:LineSegment
-                    End="201.5,100.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Tiempo.Paths[Salida de origen de OLE DB]"
           TopLeft="325,95">
@@ -1173,6 +1139,40 @@ WHERE ETLExecution = ?</property>
                     Point3="62,50.5" />
                   <mssgle:LineSegment
                     End="62,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage Tiempo.Paths[Salida de Recuento de filas 1]"
+          TopLeft="271,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="201.5,108"
+              Start="0,0"
+              End="201.5,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50"
+                    Point2="0,54"
+                    Point3="4,54" />
+                  <mssgle:LineSegment
+                    End="197.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="197.5,54"
+                    Point2="201.5,54"
+                    Point3="201.5,58" />
+                  <mssgle:LineSegment
+                    End="201.5,100.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
