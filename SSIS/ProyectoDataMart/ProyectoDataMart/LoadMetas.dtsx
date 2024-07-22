@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="LoadMetas"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{889576A0-F50B-4620-A5CA-D2D013F588AA}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{1F318B25-2DF9-492D-8ADE-57BDD749B3F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
