@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="FactMovimientos"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{834923C8-14B6-4B77-B34D-737F2D2BA8D6}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{25F89CC5-6CF5-46D7-B1D6-1A873D33CF88}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3466,13 +3466,13 @@ A.Fecha = C.Fecha_BK
 
 UNION
 
-SELECT B.Gastos_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
+SELECT B.Ingresos_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
 
 
 FROM [GASTOSPERSONALES_STAGE].[dbo].[MOVIMIENTOS] A
-JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Gastos] B
+JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Ingresos] B
 ON 
-A.ID = B.Gastos_BK
+A.ID = B.Ingresos_BK
 AND A.Tipo = 'INGRES'
 JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Tiempo] C
 ON
@@ -3480,13 +3480,13 @@ A.Fecha = C.Fecha_BK
 
 UNION
 
-SELECT B.Gastos_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
+SELECT B.Metas_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
 
 
 FROM [GASTOSPERSONALES_STAGE].[dbo].[MOVIMIENTOS] A
-JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Gastos] B
+JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Metas] B
 ON 
-A.ID = B.Gastos_BK
+A.ID = B.Metas_BK
 AND A.Tipo = 'METAS'
 JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Tiempo] C
 ON
@@ -3772,25 +3772,93 @@ A.Fecha = C.Fecha_BK</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="186,42"
+          Id="Package\Fact Movimientos\Componente de script"
+          TopLeft="98,191" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Fact Movimientos\Destino de OLE DB"
+          TopLeft="42,567" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Fact Movimientos\Combinación de mezcla"
+          TopLeft="263,299" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fact Movimientos\Recuento de filas"
+          TopLeft="50,439" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Fact Movimientos\Componente de script 1"
+          TopLeft="441,193" />
+        <NodeLayout
           Size="225,42"
           Id="Package\Fact Movimientos\Origen Datamart Movimientos"
           TopLeft="437,55" />
         <NodeLayout
-          Size="209,42"
-          Id="Package\Fact Movimientos\Origen Stage Movimientos"
-          TopLeft="106,55" />
+          Size="194,42"
+          Id="Package\Fact Movimientos\Comando de OLE DB 1"
+          TopLeft="529,667" />
         <NodeLayout
           Size="176,42"
           Id="Package\Fact Movimientos\División condicional"
           TopLeft="278,441" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Fact Movimientos\Componente de script"
-          TopLeft="98,191" />
+          Size="173,42"
+          Id="Package\Fact Movimientos\Recuento de filas 1"
+          TopLeft="542,444" />
         <NodeLayout
-          Size="195,42"
-          Id="Package\Fact Movimientos\Componente de script 1"
-          TopLeft="441,193" />
+          Size="185,42"
+          Id="Package\Fact Movimientos\Comando de OLE DB"
+          TopLeft="539,562" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Fact Movimientos\Origen Stage Movimientos"
+          TopLeft="106,55" />
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
+          TopLeft="630,486">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
+          TopLeft="130.75,481">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,86"
+              Start="0,0"
+              End="0,78.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,78.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de origen de OLE DB1]"
           TopLeft="210.5,97">
@@ -3861,36 +3929,42 @@ A.Fecha = C.Fecha_BK</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Fact Movimientos\Combinación de mezcla"
-          TopLeft="263,299" />
         <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida 0]"
-          TopLeft="191,233">
+          Id="Package\Fact Movimientos.Paths[Salida de combinación de mezcla]"
+          TopLeft="363.5,341">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="170,66"
+              EndConnector="0,100"
               Start="0,0"
-              End="170,58.5">
+              End="0,92.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29"
-                    Point2="0,33"
-                    Point3="4,33" />
+                    End="0,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
+          TopLeft="628.75,604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="166,33" />
-                  <mssgle:CubicBezierSegment
-                    Point1="166,33"
-                    Point2="170,33"
-                    Point3="170,37" />
-                  <mssgle:LineSegment
-                    End="170,58.5" />
+                    End="0,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3934,19 +4008,31 @@ A.Fecha = C.Fecha_BK</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de combinación de mezcla]"
-          TopLeft="363.5,341">
+          Id="Package\Fact Movimientos.Paths[Salida 0]"
+          TopLeft="191,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,100"
+              EndConnector="170,66"
               Start="0,0"
-              End="0,92.5">
+              End="170,58.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.5" />
+                    End="0,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="4,33" />
+                  <mssgle:LineSegment
+                    End="166,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="166,33"
+                    Point2="170,33"
+                    Point3="170,37" />
+                  <mssgle:LineSegment
+                    End="170,58.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3955,14 +4041,6 @@ A.Fecha = C.Fecha_BK</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Fact Movimientos\Recuento de filas"
-          TopLeft="50,439" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Fact Movimientos\Recuento de filas 1"
-          TopLeft="542,444" />
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Mov Nuevos]"
           TopLeft="278,461">
@@ -4009,84 +4087,6 @@ A.Fecha = C.Fecha_BK</property>
             <mssgm:EdgeLabel
               BoundingBox="3.232421875,5,74.03515625,9.7978515625"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Fact Movimientos\Destino de OLE DB"
-          TopLeft="42,567" />
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
-          TopLeft="130.75,481">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,86"
-              Start="0,0"
-              End="0,78.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,78.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB"
-          TopLeft="539,562" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB 1"
-          TopLeft="529,667" />
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
-          TopLeft="630,486">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76"
-              Start="0,0"
-              End="0,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
-          TopLeft="628.75,604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4173,6 +4173,19 @@ A.Fecha = C.Fecha_BK</property>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
+    design-time-name="Package\Fact Movimientos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Fact Movimientos\Origen Datamart Movimientos">
     <Properties>
       <Property>
@@ -4185,19 +4198,6 @@ A.Fecha = C.Fecha_BK</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact Movimientos\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

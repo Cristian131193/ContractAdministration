@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="StageMaster"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{B1FBEBA4-C477-46C3-9102-6D0B5D208333}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{EB1AF7BA-AD41-4464-AF21-F94CE3000FA4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -81,7 +81,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>StageTiempo.dtsx</PackageName>
+          <PackageName>StageMovimientos.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -98,7 +98,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>StageMovimientos.dtsx</PackageName>
+          <PackageName>StageTiempo.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -162,13 +162,13 @@
           Id="Package\Paquete Metas"
           TopLeft="382,272" />
         <NodeLayout
-          Size="160,42"
-          Id="Package\Paquete Tiempo"
-          TopLeft="537,383" />
-        <NodeLayout
           Size="185,42"
           Id="Package\Paquete Movimientos"
           TopLeft="736,490" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Paquete Tiempo"
+          TopLeft="537,383" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="185,105">
