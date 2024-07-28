@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="LoadIngresos"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{2D97F618-9EFA-4665-81A5-03E329FAB35A}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{D0600F50-CCF5-4BC3-B606-A2E4B8410431}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,13 +106,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Load Ingresos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Load Ingresos.EventHandlers[OnPostExecute]\ACTUALIZAR COUNT ROWS METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{6F488D23-3439-46AD-BD77-AA4A224A1EB8}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="ACTUALIZAR COUNT ROWS METADATA"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -912,8 +912,8 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Load Ingresos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+          Size="289,42"
+          Id="Package\Load Ingresos.EventHandlers[OnPostExecute]\ACTUALIZAR COUNT ROWS METADATA"
           TopLeft="104,41" />
       </GraphLayout>
     </LayoutInfo>

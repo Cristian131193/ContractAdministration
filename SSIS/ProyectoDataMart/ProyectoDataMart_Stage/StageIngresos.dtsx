@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="StageIngresos"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{A8AE44FF-71CF-41E1-81B3-7DAE266E379A}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{4F2F9528-A13C-4790-AFC6-67247568E7FF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -284,15 +284,15 @@
           version="1">
           <components>
             <component
-              refId="Package\Stage Ingresos\Columna derivada"
+              refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
-              name="Columna derivada"
+              name="AÑADIR COLUMNAS ETL"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Stage Ingresos\Columna derivada.Inputs[Entrada de columna derivada]"
+                  refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
                   description="Entrada en la transformación Columna derivada"
                   name="Entrada de columna derivada">
                   <externalMetadataColumns />
@@ -300,18 +300,18 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada]"
+                  refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada]"
                   description="Salida predeterminada de la transformación Columna derivada"
                   exclusionGroup="1"
                   name="Salida de columna derivada"
-                  synchronousInputId="Package\Stage Ingresos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      lineageId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
                       name="ETLLoad"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -329,11 +329,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
                       dataType="i4"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      lineageId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
                       name="ETLExecution"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -354,23 +354,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada]"
                   description="Salida de error de la transformación Columna derivada"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de columna derivada"
-                  synchronousInputId="Package\Stage Ingresos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      lineageId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      refId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -468,13 +468,13 @@
                       cachedDataType="dbTimeStamp"
                       cachedName="ETLLoad"
                       externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
-                      lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
+                      lineageId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
                     <inputColumn
                       refId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
                       cachedDataType="i4"
                       cachedName="ETLExecution"
                       externalMetadataColumnId="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
-                      lineageId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
+                      lineageId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -691,10 +691,10 @@ WHERE ETLExecution = ?</property>
               refId="Package\Stage Ingresos.Paths[Salida de columna derivada]"
               endId="Package\Stage Ingresos\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
               name="Salida de columna derivada"
-              startId="Package\Stage Ingresos\Columna derivada.Outputs[Salida de columna derivada]" />
+              startId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\Stage Ingresos.Paths[Salida de origen de OLE DB]"
-              endId="Package\Stage Ingresos\Columna derivada.Inputs[Entrada de columna derivada]"
+              endId="Package\Stage Ingresos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
               name="Salida de origen de OLE DB"
               startId="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS.Outputs[Salida de origen de OLE DB]" />
             <path
@@ -830,13 +830,13 @@ WHERE ETLExecution = ?</property>
           Id="Package\Stage Ingresos\Recuento de filas"
           TopLeft="189,325" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Stage Ingresos\Columna derivada"
-          TopLeft="125,190" />
-        <NodeLayout
           Size="381,42"
           Id="Package\Stage Ingresos\ORIGEN GASTOSPERSONALES_LOAD TABLE INGRESOS"
           TopLeft="83,53" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Stage Ingresos\AÑADIR COLUMNAS ETL"
+          TopLeft="125,190" />
         <NodeLayout
           Size="393,42"
           Id="Package\Stage Ingresos\DESTINO GASTOSPERSONALES_STAGE TABLA INGRESOS"
@@ -881,9 +881,9 @@ WHERE ETLExecution = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.5,95"
+              EndConnector="-44,95"
               Start="0,0"
-              End="-64.5,87.5">
+              End="-44,87.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -894,13 +894,13 @@ WHERE ETLExecution = ?</property>
                     Point2="0,47.5"
                     Point3="-4,47.5" />
                   <mssgle:LineSegment
-                    End="-60.5,47.5" />
+                    End="-40,47.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-60.5,47.5"
-                    Point2="-64.5,47.5"
-                    Point3="-64.5,51.5" />
+                    Point1="-40,47.5"
+                    Point2="-44,47.5"
+                    Point3="-44,51.5" />
                   <mssgle:LineSegment
-                    End="-64.5,87.5" />
+                    End="-44,87.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -911,13 +911,13 @@ WHERE ETLExecution = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Ingresos.Paths[Salida de columna derivada]"
-          TopLeft="209,232">
+          TopLeft="229.5,232">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="62,93"
+              EndConnector="41.5,93"
               Start="0,0"
-              End="62,85.5">
+              End="41.5,85.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -928,13 +928,13 @@ WHERE ETLExecution = ?</property>
                     Point2="0,46.5"
                     Point3="4,46.5" />
                   <mssgle:LineSegment
-                    End="58,46.5" />
+                    End="37.5,46.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="58,46.5"
-                    Point2="62,46.5"
-                    Point3="62,50.5" />
+                    Point1="37.5,46.5"
+                    Point2="41.5,46.5"
+                    Point3="41.5,50.5" />
                   <mssgle:LineSegment
-                    End="62,85.5" />
+                    End="41.5,85.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -950,7 +950,7 @@ WHERE ETLExecution = ?</property>
     design-time-name="Package\Stage Ingresos.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="197,42"
           Id="Package\Stage Ingresos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
@@ -990,9 +990,7 @@ WHERE ETLExecution = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

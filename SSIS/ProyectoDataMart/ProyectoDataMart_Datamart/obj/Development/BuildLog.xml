@@ -2,33 +2,28 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ProyectoDataMart_Datamart</Name>
-    <LastWriteTime>2024-07-28T18:57:30.4938677Z</LastWriteTime>
+    <LastWriteTime>2024-07-28T21:40:53.1857458Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimGastos.dtsx</Name>
-      <LastWriteTime>2024-07-28T21:24:24.469765Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T21:51:13.0539191Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimIngresos.dtsx</Name>
-      <LastWriteTime>2024-07-28T19:47:14.2702042Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T21:54:40.5840221Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimMetas.dtsx</Name>
-      <LastWriteTime>2024-07-28T21:24:24.4541422Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T21:56:56.6696378Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimTiempo.dtsx</Name>
       <LastWriteTime>2024-07-28T21:26:33.8521409Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>FactMovimientos.dtsx</Name>
-      <LastWriteTime>2024-07-28T19:24:10.3619796Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>

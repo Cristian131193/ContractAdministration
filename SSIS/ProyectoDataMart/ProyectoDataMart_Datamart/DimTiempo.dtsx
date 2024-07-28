@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimTiempo"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{EDA386C6-CA07-4069-9CCE-CE6565920D7F}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{0FB38DD2-CC82-4770-BB3D-243137EE28EA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -127,13 +127,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPostExecute]\ACTUALIZAR CONTEO DE FILAS"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{9608A769-6CE6-46B1-9DA2-BEC4B487D772}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="ACTUALIZAR CONTEO DE FILAS"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -162,13 +162,13 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL 1"
+              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPostExecute]\CONTEO TOTAL"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{796A1E98-3A77-4E3C-8975-781426E75A4E}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL 1"
+              DTS:ObjectName="CONTEO TOTAL"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -190,10 +190,10 @@
               DTS:refId="Package\Dim Tiempo.EventHandlers[OnPostExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
               DTS:DTSID="{4B951651-6BD3-4F85-82B4-93C468177A2B}"
-              DTS:From="Package\Dim Tiempo.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:From="Package\Dim Tiempo.EventHandlers[OnPostExecute]\ACTUALIZAR CONTEO DE FILAS"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
-              DTS:To="Package\Dim Tiempo.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL 1" />
+              DTS:To="Package\Dim Tiempo.EventHandlers[OnPostExecute]\CONTEO TOTAL" />
           </DTS:PrecedenceConstraints>
         </DTS:EventHandler>
         <DTS:EventHandler
@@ -217,13 +217,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{D30BBA87-59A6-4236-A5B3-05ADA4841879}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="INSERTAR METADATA"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -252,13 +252,13 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1"
+              DTS:refId="Package\Dim Tiempo.EventHandlers[OnPreExecute]\SELECT ULTIMO ID"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{490BF47D-7825-428F-847D-92945330D90B}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL 1"
+              DTS:ObjectName="SELECT ULTIMO ID"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -284,10 +284,10 @@
               DTS:refId="Package\Dim Tiempo.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
               DTS:DTSID="{CAEF37CF-71F6-422A-AA1A-EEADA18E4905}"
-              DTS:From="Package\Dim Tiempo.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+              DTS:From="Package\Dim Tiempo.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
-              DTS:To="Package\Dim Tiempo.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1" />
+              DTS:To="Package\Dim Tiempo.EventHandlers[OnPreExecute]\SELECT ULTIMO ID" />
           </DTS:PrecedenceConstraints>
         </DTS:EventHandler>
       </DTS:EventHandlers>
@@ -356,7 +356,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="StageMD5"
-                      lineageId="Package\Dim Tiempo\Componente de script.Outputs[Salida 0].Columns[StageMD5]" />
+                      lineageId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Outputs[Salida 0].Columns[StageMD5]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -399,7 +399,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="DatamartMD5"
-                      lineageId="Package\Dim Tiempo\Componente de script 1.Outputs[Salida 0].Columns[DatamartMD5]" />
+                      lineageId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Outputs[Salida 0].Columns[DatamartMD5]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -568,11 +568,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Dim Tiempo\Componente de script"
+              refId="Package\Dim Tiempo\CREAR COLUMNAS HASH"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;13"
               description="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma."
-              name="Componente de script"
+              name="CREAR COLUMNAS HASH"
               version="13">
               <properties>
                 <property
@@ -1577,30 +1577,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Dim Tiempo\Componente de script.Inputs[Entrada 0]"
+                  refId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Inputs[Entrada 0]"
                   hasSideEffects="true"
                   name="Entrada 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script.Inputs[Entrada 0].Columns[Fecha]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[Fecha]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Fecha"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Dim Tiempo\Origen Stage Tiempo.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script.Inputs[Entrada 0].Columns[Anno]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[Anno]"
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="Anno"
                       lineageId="Package\Dim Tiempo\Origen Stage Tiempo.Outputs[Salida de origen de OLE DB].Columns[Anno]" />
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script.Inputs[Entrada 0].Columns[Día]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[Día]"
                       cachedDataType="wstr"
                       cachedLength="2"
                       cachedName="Día"
                       lineageId="Package\Dim Tiempo\Origen Stage Tiempo.Outputs[Salida de origen de OLE DB].Columns[Día]" />
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script.Inputs[Entrada 0].Columns[Mes]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[Mes]"
                       cachedDataType="wstr"
                       cachedLength="2"
                       cachedName="Mes"
@@ -1611,15 +1611,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Dim Tiempo\Componente de script.Outputs[Salida 0]"
+                  refId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Outputs[Salida 0]"
                   name="Salida 0"
-                  synchronousInputId="Package\Dim Tiempo\Componente de script.Inputs[Entrada 0]">
+                  synchronousInputId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Inputs[Entrada 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Dim Tiempo\Componente de script.Outputs[Salida 0].Columns[StageMD5]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Outputs[Salida 0].Columns[StageMD5]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Dim Tiempo\Componente de script.Outputs[Salida 0].Columns[StageMD5]"
+                      lineageId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Outputs[Salida 0].Columns[StageMD5]"
                       name="StageMD5" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1627,11 +1627,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Dim Tiempo\Componente de script 1"
+              refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;13"
               description="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma."
-              name="Componente de script 1"
+              name="CREAR COLUMNAS HASH 2"
               version="13">
               <properties>
                 <property
@@ -2640,30 +2640,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Dim Tiempo\Componente de script 1.Inputs[Entrada 0]"
+                  refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Inputs[Entrada 0]"
                   hasSideEffects="true"
                   name="Entrada 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script 1.Inputs[Entrada 0].Columns[Fecha_BK]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[Fecha_BK]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Fecha_BK"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Dim Tiempo\Origen Datamart Tiempo.Outputs[Salida de origen de OLE DB].Columns[Fecha_BK]" />
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script 1.Inputs[Entrada 0].Columns[Tiempo_Anno]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[Tiempo_Anno]"
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="Tiempo_Anno"
                       lineageId="Package\Dim Tiempo\Origen Datamart Tiempo.Outputs[Salida de origen de OLE DB].Columns[Tiempo_Anno]" />
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script 1.Inputs[Entrada 0].Columns[Tiempo_Mes]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[Tiempo_Mes]"
                       cachedDataType="wstr"
                       cachedLength="2"
                       cachedName="Tiempo_Mes"
                       lineageId="Package\Dim Tiempo\Origen Datamart Tiempo.Outputs[Salida de origen de OLE DB].Columns[Tiempo_Mes]" />
                     <inputColumn
-                      refId="Package\Dim Tiempo\Componente de script 1.Inputs[Entrada 0].Columns[Tiempo_Dia]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[Tiempo_Dia]"
                       cachedDataType="wstr"
                       cachedLength="2"
                       cachedName="Tiempo_Dia"
@@ -2674,170 +2674,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Dim Tiempo\Componente de script 1.Outputs[Salida 0]"
+                  refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Outputs[Salida 0]"
                   name="Salida 0"
-                  synchronousInputId="Package\Dim Tiempo\Componente de script 1.Inputs[Entrada 0]">
+                  synchronousInputId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Inputs[Entrada 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Dim Tiempo\Componente de script 1.Outputs[Salida 0].Columns[DatamartMD5]"
+                      refId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Outputs[Salida 0].Columns[DatamartMD5]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Dim Tiempo\Componente de script 1.Outputs[Salida 0].Columns[DatamartMD5]"
+                      lineageId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Outputs[Salida 0].Columns[DatamartMD5]"
                       name="DatamartMD5" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Dim Tiempo\Destino de OLE DB"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Destino de OLE DB"
-              name="Destino de OLE DB"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[Dim_Tiempo]</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Comando SQL para ejecutar."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Dim Tiempo\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
-                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
-                  errorOrTruncationOperation="Insertar"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de OLE DB">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Fecha"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha_BK]"
-                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Fecha]" />
-                    <inputColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Anno]"
-                      cachedDataType="wstr"
-                      cachedLength="4"
-                      cachedName="Anno"
-                      externalMetadataColumnId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Anno]"
-                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Anno]" />
-                    <inputColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Mes]"
-                      cachedDataType="wstr"
-                      cachedLength="2"
-                      cachedName="Mes"
-                      externalMetadataColumnId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Mes]"
-                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Mes]" />
-                    <inputColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Día]"
-                      cachedDataType="wstr"
-                      cachedLength="2"
-                      cachedName="Día"
-                      externalMetadataColumnId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Dia]"
-                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Día]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_SK]"
-                      dataType="i4"
-                      name="Tiempo_SK" />
-                    <externalMetadataColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha_BK]"
-                      dataType="dbTimeStamp"
-                      name="Fecha_BK" />
-                    <externalMetadataColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Anno]"
-                      dataType="wstr"
-                      length="4"
-                      name="Tiempo_Anno" />
-                    <externalMetadataColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Mes]"
-                      dataType="wstr"
-                      length="2"
-                      name="Tiempo_Mes" />
-                    <externalMetadataColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Dia]"
-                      dataType="wstr"
-                      length="2"
-                      name="Tiempo_Dia" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Dim Tiempo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Dim Tiempo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Dim Tiempo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Dim Tiempo\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2960,6 +2806,160 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\Dim Tiempo\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Dim Tiempo\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="INSERTAR TABLA TIEMPO DATAMART"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Dim_Tiempo]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].Columns[Fecha]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Fecha"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha_BK]"
+                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Fecha]" />
+                    <inputColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].Columns[Anno]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="Anno"
+                      externalMetadataColumnId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Anno]"
+                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Anno]" />
+                    <inputColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].Columns[Mes]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="Mes"
+                      externalMetadataColumnId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Mes]"
+                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Mes]" />
+                    <inputColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].Columns[Día]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="Día"
+                      externalMetadataColumnId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Dia]"
+                      lineageId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Día]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_SK]"
+                      dataType="i4"
+                      name="Tiempo_SK" />
+                    <externalMetadataColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha_BK]"
+                      dataType="dbTimeStamp"
+                      name="Fecha_BK" />
+                    <externalMetadataColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Anno]"
+                      dataType="wstr"
+                      length="4"
+                      name="Tiempo_Anno" />
+                    <externalMetadataColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Mes]"
+                      dataType="wstr"
+                      length="2"
+                      name="Tiempo_Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_Dia]"
+                      dataType="wstr"
+                      length="2"
+                      name="Tiempo_Dia" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3381,12 +3381,12 @@ ORDER BY [Fecha]</property>
               refId="Package\Dim Tiempo.Paths[Salida 0]"
               endId="Package\Dim Tiempo\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida 0"
-              startId="Package\Dim Tiempo\Componente de script.Outputs[Salida 0]" />
+              startId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Outputs[Salida 0]" />
             <path
               refId="Package\Dim Tiempo.Paths[Salida 01]"
               endId="Package\Dim Tiempo\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida 0"
-              startId="Package\Dim Tiempo\Componente de script 1.Outputs[Salida 0]" />
+              startId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Outputs[Salida 0]" />
             <path
               refId="Package\Dim Tiempo.Paths[Salida de combinación de mezcla]"
               endId="Package\Dim Tiempo\División condicional.Inputs[Entrada de división condicional]"
@@ -3394,17 +3394,17 @@ ORDER BY [Fecha]</property>
               startId="Package\Dim Tiempo\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\Dim Tiempo.Paths[Salida de origen de OLE DB]"
-              endId="Package\Dim Tiempo\Componente de script 1.Inputs[Entrada 0]"
+              endId="Package\Dim Tiempo\CREAR COLUMNAS HASH 2.Inputs[Entrada 0]"
               name="Salida de origen de OLE DB"
               startId="Package\Dim Tiempo\Origen Datamart Tiempo.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Dim Tiempo.Paths[Salida de origen de OLE DB1]"
-              endId="Package\Dim Tiempo\Componente de script.Inputs[Entrada 0]"
+              endId="Package\Dim Tiempo\CREAR COLUMNAS HASH.Inputs[Entrada 0]"
               name="Salida de origen de OLE DB"
               startId="Package\Dim Tiempo\Origen Stage Tiempo.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Dim Tiempo.Paths[Salida de Recuento de filas 1]"
-              endId="Package\Dim Tiempo\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART.Inputs[Entrada de destino de OLE DB]"
               name="Salida de Recuento de filas 1"
               startId="Package\Dim Tiempo\Recuento de filas.Outputs[Salida de Recuento de filas 1]" />
           </paths>
@@ -3445,16 +3445,16 @@ ORDER BY [Fecha]</property>
           Id="Package\Dim Tiempo\Origen Datamart Tiempo"
           TopLeft="437,55" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\Dim Tiempo\Destino de OLE DB"
+          Size="281,42"
+          Id="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART"
           TopLeft="273,660" />
         <NodeLayout
           Size="164,42"
           Id="Package\Dim Tiempo\Recuento de filas"
           TopLeft="284,549" />
         <NodeLayout
-          Size="195,42"
-          Id="Package\Dim Tiempo\Componente de script 1"
+          Size="225,42"
+          Id="Package\Dim Tiempo\CREAR COLUMNAS HASH 2"
           TopLeft="441,193" />
         <NodeLayout
           Size="196,42"
@@ -3465,23 +3465,35 @@ ORDER BY [Fecha]</property>
           Id="Package\Dim Tiempo\División condicional"
           TopLeft="277,441" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Dim Tiempo\Componente de script"
+          Size="216,42"
+          Id="Package\Dim Tiempo\CREAR COLUMNAS HASH"
           TopLeft="98,191" />
         <EdgeLayout
           Id="Package\Dim Tiempo.Paths[Salida de origen de OLE DB1]"
-          TopLeft="193.75,96">
+          TopLeft="196.5,96">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95"
+              EndConnector="9.5,95"
               Start="0,0"
-              End="0,87.5">
+              End="9.5,87.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.5" />
+                    End="0,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.5"
+                    Point2="0,47.5"
+                    Point3="4,47.5" />
+                  <mssgle:LineSegment
+                    End="5.5,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.5,47.5"
+                    Point2="9.5,47.5"
+                    Point3="9.5,51.5" />
+                  <mssgle:LineSegment
+                    End="9.5,87.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3492,18 +3504,30 @@ ORDER BY [Fecha]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Tiempo.Paths[Salida de origen de OLE DB]"
-          TopLeft="537.75,97">
+          TopLeft="537,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,96"
+              EndConnector="16.5,96"
               Start="0,0"
-              End="0,88.5">
+              End="16.5,88.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.5" />
+                    End="0,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44"
+                    Point2="0,48"
+                    Point3="4,48" />
+                  <mssgle:LineSegment
+                    End="12.5,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,48"
+                    Point2="16.5,48"
+                    Point3="16.5,52" />
+                  <mssgle:LineSegment
+                    End="16.5,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3536,13 +3560,13 @@ ORDER BY [Fecha]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Tiempo.Paths[Salida 01]"
-          TopLeft="538.5,235">
+          TopLeft="553.5,235">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-143.166666666667,86"
+              EndConnector="-158.166666666667,86"
               Start="0,0"
-              End="-143.166666666667,78.5">
+              End="-158.166666666667,78.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3553,57 +3577,53 @@ ORDER BY [Fecha]</property>
                     Point2="0,51.1821862348178"
                     Point3="-4,51.1821862348178" />
                   <mssgle:LineSegment
-                    End="-139.166666666667,51.1821862348178" />
+                    End="-154.166666666667,51.1821862348178" />
                   <mssgle:CubicBezierSegment
-                    Point1="-139.166666666667,51.1821862348178"
-                    Point2="-143.166666666667,51.1821862348178"
-                    Point3="-143.166666666667,55.1821862348178" />
+                    Point1="-154.166666666667,51.1821862348178"
+                    Point2="-158.166666666667,51.1821862348178"
+                    Point3="-158.166666666667,55.1821862348178" />
                   <mssgle:LineSegment
-                    End="-143.166666666667,78.5" />
+                    End="-158.166666666667,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-79.5833333333335,56.1821862348178,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Tiempo.Paths[Salida 0]"
-          TopLeft="191,233">
+          TopLeft="206,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="173,88"
+              EndConnector="126.666666666667,88"
               Start="0,0"
-              End="173,80.5">
+              End="126.666666666667,80.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40" />
+                    End="0,48.3724696356275" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,40"
-                    Point2="0,44"
-                    Point3="4,44" />
+                    Point1="0,48.3724696356275"
+                    Point2="0,52.3724696356275"
+                    Point3="4,52.3724696356275" />
                   <mssgle:LineSegment
-                    End="169,44" />
+                    End="122.666666666667,52.3724696356275" />
                   <mssgle:CubicBezierSegment
-                    Point1="169,44"
-                    Point2="173,44"
-                    Point3="173,48" />
+                    Point1="122.666666666667,52.3724696356275"
+                    Point2="126.666666666667,52.3724696356275"
+                    Point3="126.666666666667,56.3724696356275" />
                   <mssgle:LineSegment
-                    End="173,80.5" />
+                    End="126.666666666667,80.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="78.5,49,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3632,18 +3652,30 @@ ORDER BY [Fecha]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Tiempo.Paths[Salida de Recuento de filas 1]"
-          TopLeft="363.25,591">
+          TopLeft="366,591">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,69"
+              EndConnector="47.5,69"
               Start="0,0"
-              End="0,61.5">
+              End="47.5,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.5" />
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="43.5,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.5,34.5"
+                    Point2="47.5,34.5"
+                    Point3="47.5,38.5" />
+                  <mssgle:LineSegment
+                    End="47.5,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3659,37 +3691,47 @@ ORDER BY [Fecha]</property>
     design-time-name="Package\Dim Tiempo.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Dim Tiempo.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
-          TopLeft="163,81" />
+          Size="197,42"
+          Id="Package\Dim Tiempo.EventHandlers[OnPreExecute]\INSERTAR METADATA"
+          TopLeft="164,81" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Dim Tiempo.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1"
+          Size="180,42"
+          Id="Package\Dim Tiempo.EventHandlers[OnPreExecute]\SELECT ULTIMO ID"
           TopLeft="164,218" />
         <EdgeLayout
           Id="Package\Dim Tiempo.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
-          TopLeft="253.75,123">
+          TopLeft="262.5,123">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95"
+              EndConnector="-8.5,95"
               Start="0,0"
-              End="0,87.5">
+              End="-8.5,87.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.5" />
+                    End="0,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.5"
+                    Point2="0,47.5"
+                    Point3="-4,47.5" />
+                  <mssgle:LineSegment
+                    End="-4.5,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.5,47.5"
+                    Point2="-8.5,47.5"
+                    Point3="-8.5,51.5" />
+                  <mssgle:LineSegment
+                    End="-8.5,87.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3699,42 +3741,65 @@ ORDER BY [Fecha]</property>
     design-time-name="Package\Dim Tiempo.EventHandlers[OnPostExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Dim Tiempo.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+          Size="249,42"
+          Id="Package\Dim Tiempo.EventHandlers[OnPostExecute]\ACTUALIZAR CONTEO DE FILAS"
           TopLeft="124,56" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Dim Tiempo.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL 1"
+          Size="164,42"
+          Id="Package\Dim Tiempo.EventHandlers[OnPostExecute]\CONTEO TOTAL"
           TopLeft="115,162" />
         <EdgeLayout
           Id="Package\Dim Tiempo.EventHandlers[OnPostExecute].PrecedenceConstraints[Restricción]"
-          TopLeft="209.75,98">
+          TopLeft="248.5,98">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64"
+              EndConnector="-51.5,64"
               Start="0,0"
-              End="0,56.5">
+              End="-51.5,56.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.5" />
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="-4,32" />
+                  <mssgle:LineSegment
+                    End="-47.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.5,32"
+                    Point2="-51.5,32"
+                    Point3="-51.5,36" />
+                  <mssgle:LineSegment
+                    End="-51.5,56.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dim Tiempo\INSERTAR TABLA TIEMPO DATAMART">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Dim Tiempo\Origen Stage Tiempo">
     <Properties>
@@ -3748,19 +3813,6 @@ ORDER BY [Fecha]</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim Tiempo\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

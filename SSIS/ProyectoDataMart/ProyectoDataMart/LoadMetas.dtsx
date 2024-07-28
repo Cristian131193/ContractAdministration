@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="LoadMetas"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{1F318B25-2DF9-492D-8ADE-57BDD749B3F5}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{6036A76F-9201-417D-AD69-C216D1A92B94}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,13 +106,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Load Metas.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Load Metas.EventHandlers[OnPostExecute]\ACTUALIZAR COUNT ROWS METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{F663C39A-03E1-43B7-8D1F-D76B0CC336E8}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="ACTUALIZAR COUNT ROWS METADATA"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -858,7 +858,7 @@
     design-time-name="Package\Load Metas.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="197,42"
           Id="Package\Load Metas.EventHandlers[OnPreExecute]\INSERTAR METADATA"
@@ -898,9 +898,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -912,8 +910,8 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Load Metas.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+          Size="289,42"
+          Id="Package\Load Metas.EventHandlers[OnPostExecute]\ACTUALIZAR COUNT ROWS METADATA"
           TopLeft="104,41" />
       </GraphLayout>
     </LayoutInfo>

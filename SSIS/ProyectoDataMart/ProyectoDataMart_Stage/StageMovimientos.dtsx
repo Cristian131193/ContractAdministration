@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="StageMovimientos"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{9F06E0FD-499A-468C-967D-A545C71316EE}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{CF4E7A8A-4D7E-4282-8D41-159EB2CC4DF8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -355,15 +355,15 @@
           version="1">
           <components>
             <component
-              refId="Package\Stage Movimientos\Columna derivada"
+              refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
-              name="Columna derivada"
+              name="AÑADIR COLUMNAS ETL"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Stage Movimientos\Columna derivada.Inputs[Entrada de columna derivada]"
+                  refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
                   description="Entrada en la transformación Columna derivada"
                   name="Entrada de columna derivada">
                   <externalMetadataColumns />
@@ -371,18 +371,18 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada]"
+                  refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada]"
                   description="Salida predeterminada de la transformación Columna derivada"
                   exclusionGroup="1"
                   name="Salida de columna derivada"
-                  synchronousInputId="Package\Stage Movimientos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]"
+                      lineageId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]"
                       name="ETLLoad"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -400,11 +400,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
                       dataType="i4"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]"
+                      lineageId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]"
                       name="ETLExecution"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -425,23 +425,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada]"
                   description="Salida de error de la transformación Columna derivada"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de columna derivada"
-                  synchronousInputId="Package\Stage Movimientos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  synchronousInputId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      lineageId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      refId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -465,24 +465,24 @@
                       refId="Package\Stage Movimientos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ID]"
                       cachedDataType="i4"
                       cachedName="ID"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[ID]" />
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[ID]" />
                     <inputColumn
                       refId="Package\Stage Movimientos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[TIPO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="6"
                       cachedName="TIPO"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[TIPO]" />
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[TIPO]" />
                     <inputColumn
                       refId="Package\Stage Movimientos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Monto]"
                       cachedDataType="cy"
                       cachedName="Monto"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
                     <inputColumn
                       refId="Package\Stage Movimientos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Fecha]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Fecha"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -507,7 +507,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -528,7 +528,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[TIPO]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[TIPO]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -548,7 +548,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Monto]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -568,7 +568,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -603,11 +603,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS"
+              refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="DESTINO GASTOSPERSONALES_STAGE TABLA METAS"
+              name="DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS"
               usesDispositions="true"
               version="4">
               <properties>
@@ -660,7 +660,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Connections[OleDbConnection]"
+                  refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -668,75 +668,75 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].Columns[ETLLoad]"
                       cachedDataType="dbTimeStamp"
                       cachedName="ETLLoad"
-                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
-                      lineageId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
+                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      lineageId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLLoad]" />
                     <inputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].Columns[ETLExecution]"
                       cachedDataType="i4"
                       cachedName="ETLExecution"
-                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
-                      lineageId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
+                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      lineageId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada].Columns[ETLExecution]" />
                     <inputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Copy of ID]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].Columns[Copy of ID]"
                       cachedDataType="i4"
                       cachedName="Copy of ID"
-                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of ID]" />
                     <inputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Copy of TIPO]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].Columns[Copy of TIPO]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Copy of TIPO"
-                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tipo]"
+                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tipo]"
                       lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of TIPO]" />
                     <inputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Copy of Monto]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].Columns[Copy of Monto]"
                       cachedDataType="cy"
                       cachedName="Copy of Monto"
-                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Monto]" />
                     <inputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].Columns[Copy of Fecha]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].Columns[Copy of Fecha]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Copy of Fecha"
-                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      externalMetadataColumnId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
                       lineageId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Fecha]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLLoad]"
                       dataType="dbTimeStamp"
                       name="ETLLoad" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[ETLExecution]"
                       dataType="i4"
                       name="ETLExecution" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tipo]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tipo]"
                       dataType="wstr"
                       length="6"
                       name="Tipo" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Monto]"
                       dataType="cy"
                       name="Monto" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha]"
                       dataType="dbTimeStamp"
                       name="Fecha" />
                   </externalMetadataColumns>
@@ -744,22 +744,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -768,11 +768,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS"
+              refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
               description="Origen de OLE DB"
-              name="ORIGEN GASTOSPERSONALES_LOAD TABLE METAS"
+              name="ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS"
               usesDispositions="true"
               version="7">
               <properties>
@@ -837,7 +837,7 @@ WHERE A.ETLExecution = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Connections[OleDbConnection]"
+                  refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_LOAD]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -845,107 +845,107 @@ WHERE A.ETLExecution = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB]"
+                  refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB]"
                   name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[ID]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[ID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[ID]"
+                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[ID]"
                       name="ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[TIPO]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[TIPO]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPO]"
+                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPO]"
                       length="6"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[TIPO]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[TIPO]"
                       name="TIPO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
                       dataType="cy"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
+                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Monto]"
                       name="Monto"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      externalMetadataColumnId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
                       name="Fecha"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPO]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPO]"
                       codePage="1252"
                       dataType="str"
                       length="6"
                       name="TIPO" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Monto]"
                       dataType="cy"
                       name="Monto" />
                     <externalMetadataColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
                       dataType="dbTimeStamp"
                       name="Fecha" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB]"
+                  refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
                   name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
                       dataType="i4"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[ID]"
                       name="ID" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[TIPO]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPO]"
                       codePage="1252"
                       dataType="str"
                       length="6"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[TIPO]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPO]"
                       name="TIPO" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
                       dataType="cy"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[Monto]"
                       name="Monto" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
                       name="Fecha" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -988,20 +988,20 @@ WHERE A.ETLExecution = ?</property>
               refId="Package\Stage Movimientos.Paths[Salida de columna derivada]"
               endId="Package\Stage Movimientos\Recuento de filas.Inputs[Entrada de Recuento de filas 1]"
               name="Salida de columna derivada"
-              startId="Package\Stage Movimientos\Columna derivada.Outputs[Salida de columna derivada]" />
+              startId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\Stage Movimientos.Paths[Salida de conversión de datos]"
-              endId="Package\Stage Movimientos\Columna derivada.Inputs[Entrada de columna derivada]"
+              endId="Package\Stage Movimientos\AÑADIR COLUMNAS ETL.Inputs[Entrada de columna derivada]"
               name="Salida de conversión de datos"
               startId="Package\Stage Movimientos\Conversión de datos.Outputs[Salida de conversión de datos]" />
             <path
               refId="Package\Stage Movimientos.Paths[Salida de origen de OLE DB]"
               endId="Package\Stage Movimientos\Conversión de datos.Inputs[Entrada de conversión de datos]"
               name="Salida de origen de OLE DB"
-              startId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS.Outputs[Salida de origen de OLE DB]" />
+              startId="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Stage Movimientos.Paths[Salida de Recuento de filas 1]"
-              endId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS.Inputs[Entrada de destino de OLE DB]"
               name="Salida de Recuento de filas 1"
               startId="Package\Stage Movimientos\Recuento de filas.Outputs[Salida de Recuento de filas 1]" />
           </paths>
@@ -1212,35 +1212,47 @@ WHERE A.ETLExecution = ?</property>
           Id="Package\Stage Movimientos\Conversión de datos"
           TopLeft="271,154" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Stage Movimientos\Columna derivada"
+          Size="209,42"
+          Id="Package\Stage Movimientos\AÑADIR COLUMNAS ETL"
           TopLeft="279,292" />
         <NodeLayout
           Size="164,42"
           Id="Package\Stage Movimientos\Recuento de filas"
           TopLeft="283,429" />
         <NodeLayout
-          Size="360,42"
-          Id="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS"
+          Size="488,42"
+          Id="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS"
           TopLeft="188,18" />
         <NodeLayout
-          Size="373,42"
-          Id="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS"
+          Size="414,42"
+          Id="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS"
           TopLeft="185,552" />
         <EdgeLayout
           Id="Package\Stage Movimientos.Paths[Salida de conversión de datos]"
-          TopLeft="362,196">
+          TopLeft="361,196">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,96"
+              EndConnector="22.5,96"
               Start="0,0"
-              End="0,88.5">
+              End="22.5,88.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.5" />
+                    End="0,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44"
+                    Point2="0,48"
+                    Point3="4,48" />
+                  <mssgle:LineSegment
+                    End="18.5,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,48"
+                    Point2="22.5,48"
+                    Point3="22.5,52" />
+                  <mssgle:LineSegment
+                    End="22.5,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1251,18 +1263,30 @@ WHERE A.ETLExecution = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Movimientos.Paths[Salida de columna derivada]"
-          TopLeft="364,334">
+          TopLeft="383.5,334">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95"
+              EndConnector="-18.5,95"
               Start="0,0"
-              End="0,87.5">
+              End="-18.5,87.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.5" />
+                    End="0,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.5"
+                    Point2="0,47.5"
+                    Point3="-4,47.5" />
+                  <mssgle:LineSegment
+                    End="-14.5,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.5,47.5"
+                    Point2="-18.5,47.5"
+                    Point3="-18.5,51.5" />
+                  <mssgle:LineSegment
+                    End="-18.5,87.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1273,18 +1297,30 @@ WHERE A.ETLExecution = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Movimientos.Paths[Salida de Recuento de filas 1]"
-          TopLeft="368.25,471">
+          TopLeft="365,471">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,81"
+              EndConnector="27,81"
               Start="0,0"
-              End="0,73.5">
+              End="27,73.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.5" />
+                    End="0,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5"
+                    Point2="0,40.5"
+                    Point3="4,40.5" />
+                  <mssgle:LineSegment
+                    End="23,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23,40.5"
+                    Point2="27,40.5"
+                    Point3="27,44.5" />
+                  <mssgle:LineSegment
+                    End="27,73.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1295,18 +1331,30 @@ WHERE A.ETLExecution = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Movimientos.Paths[Salida de origen de OLE DB]"
-          TopLeft="364.5,60">
+          TopLeft="432,60">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,94"
+              EndConnector="-71,94"
               Start="0,0"
-              End="0,86.5">
+              End="-71,86.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,86.5" />
+                    End="0,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43"
+                    Point2="0,47"
+                    Point3="-4,47" />
+                  <mssgle:LineSegment
+                    End="-67,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67,47"
+                    Point2="-71,47"
+                    Point3="-71,51" />
+                  <mssgle:LineSegment
+                    End="-71,86.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1322,7 +1370,7 @@ WHERE A.ETLExecution = ?</property>
     design-time-name="Package\Stage Movimientos.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="197,42"
           Id="Package\Stage Movimientos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
@@ -1362,9 +1410,7 @@ WHERE A.ETLExecution = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1383,7 +1429,7 @@ WHERE A.ETLExecution = ?</property>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS">
+    design-time-name="Package\Stage Movimientos\ORIGEN GASTOSPERSONALES_LOAD TABLE METAS _ INGRESOS _ GASTOS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1391,7 +1437,7 @@ WHERE A.ETLExecution = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA METAS">
+    design-time-name="Package\Stage Movimientos\DESTINO GASTOSPERSONALES_STAGE TABLA MOVIMIENTOS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

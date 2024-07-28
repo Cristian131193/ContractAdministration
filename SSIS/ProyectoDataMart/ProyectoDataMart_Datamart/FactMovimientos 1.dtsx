@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="FactMovimientos"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{40FE1118-52AD-42EA-9A83-4381649EDEFB}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{D93CB801-1A84-4470-BDE3-E1E538D4C021}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -249,13 +249,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute]\ACTUALIZAR CONTEO FILAS"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{ECC89220-AEC8-46D8-B83F-A13C34F1607B}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="ACTUALIZAR CONTEO FILAS"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -284,13 +284,13 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL 1"
+              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute]\CONTEO FINAL"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{08F14377-6B05-4DA3-BBC3-A0FBBBEAF2C3}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL 1"
+              DTS:ObjectName="CONTEO FINAL"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -312,10 +312,10 @@
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
               DTS:DTSID="{F4A041F9-D00A-4E6F-BBCC-BDD66B6A9998}"
-              DTS:From="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+              DTS:From="Package\Fact Movimientos.EventHandlers[OnPostExecute]\ACTUALIZAR CONTEO FILAS"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
-              DTS:To="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL 1" />
+              DTS:To="Package\Fact Movimientos.EventHandlers[OnPostExecute]\CONTEO FINAL" />
           </DTS:PrecedenceConstraints>
         </DTS:EventHandler>
         <DTS:EventHandler
@@ -339,13 +339,13 @@
           </DTS:Variables>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{974D7D15-E4DC-4BFA-B8B6-655714CFCC8F}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL"
+              DTS:ObjectName="INSERTAR METADATA"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -374,13 +374,13 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1"
+              DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute]\SELECT ULTIMO ID"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
               DTS:DTSID="{0325D8E3-F384-46AE-8861-2FD614670D73}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
-              DTS:ObjectName="Tarea Ejecutar SQL 1"
+              DTS:ObjectName="SELECT ULTIMO ID"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -406,10 +406,10 @@
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
               DTS:DTSID="{87D7799C-3AFB-4415-9F65-639B9F10682C}"
-              DTS:From="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+              DTS:From="Package\Fact Movimientos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
-              DTS:To="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1" />
+              DTS:To="Package\Fact Movimientos.EventHandlers[OnPreExecute]\SELECT ULTIMO ID" />
           </DTS:PrecedenceConstraints>
         </DTS:EventHandler>
       </DTS:EventHandlers>
@@ -418,168 +418,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Fact Movimientos\Comando de OLE DB"
+              refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
               description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
-              name="Comando de OLE DB"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Comando SQL para ejecutar."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">INSERT INTO  [GASTOSPERSONALES_STAGE].[dbo].[Fact_Movimientos](
-      [ID_SK]
-      ,[Tiempo_SK]
-      ,[Movimientos_Tipo]
-      ,[Movimientos_Monto]
-      ,[ETLLoad])
-VALUES 
-(?,?,?,?,GETDATE())</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Fact Movimientos\Comando de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
-                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
-                  errorOrTruncationOperation="Ejecución de comando"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de comando de OLE DB">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[ID_SK]"
-                      cachedDataType="i4"
-                      cachedName="ID_SK"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Tiempo_SK]"
-                      cachedDataType="i4"
-                      cachedName="Tiempo_SK"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Movimientos_Tipo]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="Movimientos_Tipo"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Movimientos_Tipo]" />
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Movimientos_Monto]"
-                      cachedDataType="cy"
-                      cachedName="Movimientos_Monto"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Movimientos_Monto]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
-                      dataType="i4"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
-                      dataType="wstr"
-                      length="6"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
-                      dataType="cy"
-                      name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Fact Movimientos\Comando de OLE DB.Outputs[Salida de comando de OLE DB]"
-                  exclusionGroup="1"
-                  name="Salida de comando de OLE DB"
-                  synchronousInputId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Fact Movimientos\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de comando de OLE DB"
-                  synchronousInputId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Fact Movimientos\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Fact Movimientos\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Fact Movimientos\Comando de OLE DB 1"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
-              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
-              name="Comando de OLE DB 1"
+              name="Actualizar Tabla Movimientos Datamart"
               usesDispositions="true"
               version="2">
               <properties>
@@ -610,7 +453,7 @@ AND [Movimientos_Tipo] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fact Movimientos\Comando de OLE DB 1.Connections[OleDbConnection]"
+                  refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -618,44 +461,44 @@ AND [Movimientos_Tipo] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB]"
+                  refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB]"
                   errorOrTruncationOperation="Ejecución de comando"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de comando de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[ID_SK]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[Tiempo_SK]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].Columns[Tiempo_SK]"
                       cachedDataType="i4"
                       cachedName="Tiempo_SK"
                       cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[Movimientos_Tipo]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].Columns[Movimientos_Tipo]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Movimientos_Tipo"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      externalMetadataColumnId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Movimientos_Tipo]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[Monto]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].Columns[Monto]"
                       cachedDataType="cy"
                       cachedName="Monto"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      externalMetadataColumnId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
                       dataType="cy"
                       name="Param_0">
                       <properties>
@@ -666,7 +509,7 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
                       dataType="i4"
                       name="Param_1">
                       <properties>
@@ -677,7 +520,7 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
                       dataType="i4"
                       name="Param_2">
                       <properties>
@@ -688,7 +531,7 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
                       dataType="wstr"
                       length="6"
                       name="Param_3">
@@ -704,29 +547,29 @@ AND [Movimientos_Tipo] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fact Movimientos\Comando de OLE DB 1.Outputs[Salida de comando de OLE DB]"
+                  refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Outputs[Salida de comando de OLE DB]"
                   exclusionGroup="1"
                   name="Salida de comando de OLE DB"
-                  synchronousInputId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB]">
+                  synchronousInputId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fact Movimientos\Comando de OLE DB 1.Outputs[Salida de error de comando de OLE DB]"
+                  refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Outputs[Salida de error de comando de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de comando de OLE DB"
-                  synchronousInputId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB]">
+                  synchronousInputId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fact Movimientos\Comando de OLE DB 1.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fact Movimientos\Comando de OLE DB 1.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -795,7 +638,7 @@ AND [Movimientos_Tipo] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="StageMD5"
-                      lineageId="Package\Fact Movimientos\Componente de script.Outputs[Salida 0].Columns[StageMD5]" />
+                      lineageId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Outputs[Salida 0].Columns[StageMD5]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -833,7 +676,7 @@ AND [Movimientos_Tipo] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="DatamartMD5"
-                      lineageId="Package\Fact Movimientos\Componente de script 1.Outputs[Salida 0].Columns[DatamartMD5]" />
+                      lineageId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Outputs[Salida 0].Columns[DatamartMD5]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -987,11 +830,11 @@ AND [Movimientos_Tipo] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Fact Movimientos\Componente de script"
+              refId="Package\Fact Movimientos\CREAR COLUMNAS HASH"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;13"
               description="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma."
-              name="Componente de script"
+              name="CREAR COLUMNAS HASH"
               version="13">
               <properties>
                 <property
@@ -1996,31 +1839,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0]"
+                  refId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Inputs[Entrada 0]"
                   hasSideEffects="true"
                   name="Entrada 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[ID_SK]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[Tiempo_SK]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[Tiempo_SK]"
                       cachedDataType="i4"
                       cachedName="Tiempo_SK"
                       cachedSortKeyPosition="3"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tiempo_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[Tipo]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[Tipo]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Tipo"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tipo]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[Monto]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Inputs[Entrada 0].Columns[Monto]"
                       cachedDataType="cy"
                       cachedName="Monto"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Monto]" />
@@ -2030,15 +1873,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fact Movimientos\Componente de script.Outputs[Salida 0]"
+                  refId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Outputs[Salida 0]"
                   name="Salida 0"
-                  synchronousInputId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0]">
+                  synchronousInputId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Inputs[Entrada 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Componente de script.Outputs[Salida 0].Columns[StageMD5]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Outputs[Salida 0].Columns[StageMD5]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Fact Movimientos\Componente de script.Outputs[Salida 0].Columns[StageMD5]"
+                      lineageId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Outputs[Salida 0].Columns[StageMD5]"
                       name="StageMD5" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -2046,11 +1889,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Fact Movimientos\Componente de script 1"
+              refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;13"
               description="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma."
-              name="Componente de script 1"
+              name="CREAR COLUMNAS HASH 2"
               version="13">
               <properties>
                 <property
@@ -3059,31 +2902,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0]"
+                  refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Inputs[Entrada 0]"
                   hasSideEffects="true"
                   name="Entrada 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[ID_SK]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[Tiempo_SK]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[Tiempo_SK]"
                       cachedDataType="i4"
                       cachedName="Tiempo_SK"
                       cachedSortKeyPosition="3"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tiempo_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[Movimientos_Tipo]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[Movimientos_Tipo]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Movimientos_Tipo"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Tipo]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[Movimientos_Monto]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Inputs[Entrada 0].Columns[Movimientos_Monto]"
                       cachedDataType="cy"
                       cachedName="Movimientos_Monto"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Monto]" />
@@ -3093,164 +2936,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fact Movimientos\Componente de script 1.Outputs[Salida 0]"
+                  refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Outputs[Salida 0]"
                   name="Salida 0"
-                  synchronousInputId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0]">
+                  synchronousInputId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Inputs[Entrada 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Componente de script 1.Outputs[Salida 0].Columns[DatamartMD5]"
+                      refId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Outputs[Salida 0].Columns[DatamartMD5]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Fact Movimientos\Componente de script 1.Outputs[Salida 0].Columns[DatamartMD5]"
+                      lineageId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Outputs[Salida 0].Columns[DatamartMD5]"
                       name="DatamartMD5" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Fact Movimientos\Destino de OLE DB"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Destino de OLE DB"
-              name="Destino de OLE DB"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[Fact_Movimientos]</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Comando SQL para ejecutar."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Fact Movimientos\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
-                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
-                  errorOrTruncationOperation="Insertar"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de OLE DB">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID_SK]"
-                      cachedDataType="i4"
-                      cachedName="ID_SK"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_SK]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tiempo_SK]"
-                      cachedDataType="i4"
-                      cachedName="Tiempo_SK"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_SK]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tipo]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="Tipo"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Tipo]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo]" />
-                    <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
-                      cachedDataType="cy"
-                      cachedName="Monto"
-                      externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Monto]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_SK]"
-                      dataType="i4"
-                      name="ID_SK" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_SK]"
-                      dataType="i4"
-                      name="Tiempo_SK" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Tipo]"
-                      dataType="wstr"
-                      length="6"
-                      name="Movimientos_Tipo" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Monto]"
-                      dataType="cy"
-                      name="Movimientos_Monto" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Fact Movimientos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Fact Movimientos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Fact Movimientos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3373,6 +3068,311 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\Fact Movimientos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Fact Movimientos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact Movimientos\Insertar Movimientos MOD"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
+              name="Insertar Movimientos MOD"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">INSERT INTO  [GASTOSPERSONALES_STAGE].[dbo].[Fact_Movimientos](
+      [ID_SK]
+      ,[Tiempo_SK]
+      ,[Movimientos_Tipo]
+      ,[Movimientos_Monto]
+      ,[ETLLoad])
+VALUES 
+(?,?,?,?,GETDATE())</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact Movimientos\Insertar Movimientos MOD.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB]"
+                  errorOrTruncationOperation="Ejecución de comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de comando de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].Columns[ID_SK]"
+                      cachedDataType="i4"
+                      cachedName="ID_SK"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].Columns[Tiempo_SK]"
+                      cachedDataType="i4"
+                      cachedName="Tiempo_SK"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].Columns[Movimientos_Tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Movimientos_Tipo"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Movimientos_Tipo]" />
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].Columns[Movimientos_Monto]"
+                      cachedDataType="cy"
+                      cachedName="Movimientos_Monto"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Movimientos_Monto]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      dataType="wstr"
+                      length="6"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      dataType="cy"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact Movimientos\Insertar Movimientos MOD.Outputs[Salida de comando de OLE DB]"
+                  exclusionGroup="1"
+                  name="Salida de comando de OLE DB"
+                  synchronousInputId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fact Movimientos\Insertar Movimientos MOD.Outputs[Salida de error de comando de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de comando de OLE DB"
+                  synchronousInputId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact Movimientos\Insertar Movimientos MOD.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact Movimientos\Insertar Movimientos MOD.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact Movimientos\Insertar Movimientos MOD.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Insertar Tabla Movimientos Datamart"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Fact_Movimientos]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].Columns[ID_SK]"
+                      cachedDataType="i4"
+                      cachedName="ID_SK"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_SK]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].Columns[Tiempo_SK]"
+                      cachedDataType="i4"
+                      cachedName="Tiempo_SK"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_SK]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].Columns[Tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Tipo"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Tipo]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo]" />
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
+                      cachedDataType="cy"
+                      cachedName="Monto"
+                      externalMetadataColumnId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Monto]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_SK]"
+                      dataType="i4"
+                      name="ID_SK" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_SK]"
+                      dataType="i4"
+                      name="Tiempo_SK" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Tipo]"
+                      dataType="wstr"
+                      length="6"
+                      name="Movimientos_Tipo" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Monto]"
+                      dataType="cy"
+                      name="Movimientos_Monto" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3832,17 +3832,17 @@ A.Fecha = C.Fecha_BK</property>
               refId="Package\Fact Movimientos.Paths[Salida 0]"
               endId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida 0"
-              startId="Package\Fact Movimientos\Componente de script.Outputs[Salida 0]" />
+              startId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Outputs[Salida 0]" />
             <path
               refId="Package\Fact Movimientos.Paths[Salida 01]"
               endId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida 0"
-              startId="Package\Fact Movimientos\Componente de script 1.Outputs[Salida 0]" />
+              startId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Outputs[Salida 0]" />
             <path
               refId="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
-              endId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB]"
+              endId="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart.Inputs[Entrada de comando de OLE DB]"
               name="Salida de comando de OLE DB"
-              startId="Package\Fact Movimientos\Comando de OLE DB.Outputs[Salida de comando de OLE DB]" />
+              startId="Package\Fact Movimientos\Insertar Movimientos MOD.Outputs[Salida de comando de OLE DB]" />
             <path
               refId="Package\Fact Movimientos.Paths[Salida de combinación de mezcla]"
               endId="Package\Fact Movimientos\División condicional.Inputs[Entrada de división condicional]"
@@ -3850,22 +3850,22 @@ A.Fecha = C.Fecha_BK</property>
               startId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\Fact Movimientos.Paths[Salida de origen de OLE DB]"
-              endId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0]"
+              endId="Package\Fact Movimientos\CREAR COLUMNAS HASH 2.Inputs[Entrada 0]"
               name="Salida de origen de OLE DB"
               startId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Fact Movimientos.Paths[Salida de origen de OLE DB1]"
-              endId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0]"
+              endId="Package\Fact Movimientos\CREAR COLUMNAS HASH.Inputs[Entrada 0]"
               name="Salida de origen de OLE DB"
               startId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
-              endId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart.Inputs[Entrada de destino de OLE DB]"
               name="Salida de Recuento de filas 1"
               startId="Package\Fact Movimientos\Recuento de filas.Outputs[Salida de Recuento de filas 1]" />
             <path
               refId="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
-              endId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+              endId="Package\Fact Movimientos\Insertar Movimientos MOD.Inputs[Entrada de comando de OLE DB]"
               name="Salida de Recuento de filas 1"
               startId="Package\Fact Movimientos\Recuento de filas 1.Outputs[Salida de Recuento de filas 1]" />
           </paths>
@@ -3898,12 +3898,12 @@ A.Fecha = C.Fecha_BK</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="186,42"
-          Id="Package\Fact Movimientos\Componente de script"
+          Size="216,42"
+          Id="Package\Fact Movimientos\CREAR COLUMNAS HASH"
           TopLeft="98,191" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\Fact Movimientos\Destino de OLE DB"
+          Size="260,42"
+          Id="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart"
           TopLeft="45,660" />
         <NodeLayout
           Size="196,42"
@@ -3914,17 +3914,17 @@ A.Fecha = C.Fecha_BK</property>
           Id="Package\Fact Movimientos\Recuento de filas"
           TopLeft="53,532" />
         <NodeLayout
-          Size="195,42"
-          Id="Package\Fact Movimientos\Componente de script 1"
+          Size="225,42"
+          Id="Package\Fact Movimientos\CREAR COLUMNAS HASH 2"
           TopLeft="441,193" />
         <NodeLayout
           Size="225,42"
           Id="Package\Fact Movimientos\Origen Datamart Movimientos"
           TopLeft="437,55" />
         <NodeLayout
-          Size="194,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB 1"
-          TopLeft="532,760" />
+          Size="271,42"
+          Id="Package\Fact Movimientos\Actualizar Tabla Movimientos Datamart"
+          TopLeft="532,761" />
         <NodeLayout
           Size="176,42"
           Id="Package\Fact Movimientos\División condicional"
@@ -3934,8 +3934,8 @@ A.Fecha = C.Fecha_BK</property>
           Id="Package\Fact Movimientos\Recuento de filas 1"
           TopLeft="545,537" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB"
+          Size="210,42"
+          Id="Package\Fact Movimientos\Insertar Movimientos MOD"
           TopLeft="542,655" />
         <NodeLayout
           Size="209,42"
@@ -3943,18 +3943,30 @@ A.Fecha = C.Fecha_BK</property>
           TopLeft="106,55" />
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
-          TopLeft="633,579">
+          TopLeft="631.5,579">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,76"
+              EndConnector="15.5,76"
               Start="0,0"
-              End="0,68.5">
+              End="15.5,68.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,68.5" />
+                    End="0,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34"
+                    Point2="0,38"
+                    Point3="4,38" />
+                  <mssgle:LineSegment
+                    End="11.5,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,38"
+                    Point2="15.5,38"
+                    Point3="15.5,42" />
+                  <mssgle:LineSegment
+                    End="15.5,68.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3965,18 +3977,30 @@ A.Fecha = C.Fecha_BK</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
-          TopLeft="133.75,574">
+          TopLeft="135,574">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,86"
+              EndConnector="40,86"
               Start="0,0"
-              End="0,78.5">
+              End="40,78.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,78.5" />
+                    End="0,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
+                  <mssgle:LineSegment
+                    End="36,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36,43"
+                    Point2="40,43"
+                    Point3="40,47" />
+                  <mssgle:LineSegment
+                    End="40,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3987,30 +4011,18 @@ A.Fecha = C.Fecha_BK</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de origen de OLE DB1]"
-          TopLeft="210.5,97">
+          TopLeft="208.25,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-19.5,94"
+              EndConnector="0,94"
               Start="0,0"
-              End="-19.5,86.5">
+              End="0,86.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43"
-                    Point2="0,47"
-                    Point3="-4,47" />
-                  <mssgle:LineSegment
-                    End="-15.5,47" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.5,47"
-                    Point2="-19.5,47"
-                    Point3="-19.5,51" />
-                  <mssgle:LineSegment
-                    End="-19.5,86.5" />
+                    End="0,86.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4021,30 +4033,18 @@ A.Fecha = C.Fecha_BK</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de origen de OLE DB]"
-          TopLeft="549.5,97">
+          TopLeft="551.5,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11,96"
+              EndConnector="0,96"
               Start="0,0"
-              End="-11,88.5">
+              End="0,88.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44"
-                    Point2="0,48"
-                    Point3="-4,48" />
-                  <mssgle:LineSegment
-                    End="-7,48" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7,48"
-                    Point2="-11,48"
-                    Point3="-11,52" />
-                  <mssgle:LineSegment
-                    End="-11,88.5" />
+                    End="0,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4072,25 +4072,35 @@ A.Fecha = C.Fecha_BK</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,25.75,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
-          TopLeft="631.75,697">
+          TopLeft="647,697">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63"
+              EndConnector="20.5,64"
               Start="0,0"
-              End="0,55.5">
+              End="20.5,56.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.5" />
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="4,32" />
+                  <mssgle:LineSegment
+                    End="16.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,32"
+                    Point2="20.5,32"
+                    Point3="20.5,36" />
+                  <mssgle:LineSegment
+                    End="20.5,56.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4101,13 +4111,13 @@ A.Fecha = C.Fecha_BK</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida 01]"
-          TopLeft="538.5,235">
+          TopLeft="553.5,235">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-142.166666666667,182"
+              EndConnector="-157.166666666667,182"
               Start="0,0"
-              End="-142.166666666667,174.5">
+              End="-157.166666666667,174.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4118,57 +4128,53 @@ A.Fecha = C.Fecha_BK</property>
                     Point2="0,108.315789473684"
                     Point3="-4,108.315789473684" />
                   <mssgle:LineSegment
-                    End="-138.166666666667,108.315789473684" />
+                    End="-153.166666666667,108.315789473684" />
                   <mssgle:CubicBezierSegment
-                    Point1="-138.166666666667,108.315789473684"
-                    Point2="-142.166666666667,108.315789473684"
-                    Point3="-142.166666666667,112.315789473684" />
+                    Point1="-153.166666666667,108.315789473684"
+                    Point2="-157.166666666667,108.315789473684"
+                    Point3="-157.166666666667,112.315789473684" />
                   <mssgle:LineSegment
-                    End="-142.166666666667,174.5" />
+                    End="-157.166666666667,174.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-79.0833333333335,113.315789473684,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida 0]"
-          TopLeft="191,233">
+          TopLeft="206,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="174,184"
+              EndConnector="127.666666666667,184"
               Start="0,0"
-              End="174,176.5">
+              End="127.666666666667,176.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88" />
+                    End="0,105.506072874494" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,88"
-                    Point2="0,92"
-                    Point3="4,92" />
+                    Point1="0,105.506072874494"
+                    Point2="0,109.506072874494"
+                    Point3="4,109.506072874494" />
                   <mssgle:LineSegment
-                    End="170,92" />
+                    End="123.666666666667,109.506072874494" />
                   <mssgle:CubicBezierSegment
-                    Point1="170,92"
-                    Point2="174,92"
-                    Point3="174,96" />
+                    Point1="123.666666666667,109.506072874494"
+                    Point2="127.666666666667,109.506072874494"
+                    Point3="127.666666666667,113.506072874494" />
                   <mssgle:LineSegment
-                    End="174,176.5" />
+                    End="127.666666666667,176.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="79,97,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4226,18 +4232,18 @@ A.Fecha = C.Fecha_BK</property>
     design-time-name="Package\Fact Movimientos.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
+          Size="197,42"
+          Id="Package\Fact Movimientos.EventHandlers[OnPreExecute]\INSERTAR METADATA"
           TopLeft="163,81" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1"
+          Size="180,42"
+          Id="Package\Fact Movimientos.EventHandlers[OnPreExecute]\SELECT ULTIMO ID"
           TopLeft="164,218" />
         <EdgeLayout
           Id="Package\Fact Movimientos.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
-          TopLeft="253.75,123">
+          TopLeft="257.75,123">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4254,9 +4260,7 @@ A.Fecha = C.Fecha_BK</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4266,44 +4270,54 @@ A.Fecha = C.Fecha_BK</property>
     design-time-name="Package\Fact Movimientos.EventHandlers[OnPostExecute]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
+          Size="231,42"
+          Id="Package\Fact Movimientos.EventHandlers[OnPostExecute]\ACTUALIZAR CONTEO FILAS"
           TopLeft="124,56" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL 1"
+          Size="160,42"
+          Id="Package\Fact Movimientos.EventHandlers[OnPostExecute]\CONTEO FINAL"
           TopLeft="115,162" />
         <EdgeLayout
           Id="Package\Fact Movimientos.EventHandlers[OnPostExecute].PrecedenceConstraints[Restricción]"
-          TopLeft="209.75,98">
+          TopLeft="239.5,98">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64"
+              EndConnector="-44.5,64"
               Start="0,0"
-              End="0,56.5">
+              End="-44.5,56.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.5" />
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="-4,32" />
+                  <mssgle:LineSegment
+                    End="-40.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-40.5,32"
+                    Point2="-44.5,32"
+                    Point3="-44.5,36" />
+                  <mssgle:LineSegment
+                    End="-44.5,56.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Movimientos\Destino de OLE DB">
+    design-time-name="Package\Fact Movimientos\Insertar Tabla Movimientos Datamart">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
