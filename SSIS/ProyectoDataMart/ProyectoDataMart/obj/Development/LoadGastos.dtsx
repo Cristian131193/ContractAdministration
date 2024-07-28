@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="LoadGastos"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{B3881F80-5686-4DEE-9D2E-A86CD79F1A0B}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{2795FE22-A735-4FB1-BF51-38607715E1FC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -376,7 +376,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."

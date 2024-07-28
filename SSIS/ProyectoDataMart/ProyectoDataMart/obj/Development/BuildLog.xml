@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
-    <Name>ProyectoDataMart_LOAD</Name>
-    <LastWriteTime>2024-07-06T03:06:24.7551488Z</LastWriteTime>
+    <Name>ProyectoDataMart</Name>
+    <LastWriteTime>2024-07-06T01:51:14.8333066Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>LoadIngresos.dtsx</Name>
-      <LastWriteTime>2024-07-22T02:13:33.5125604Z</LastWriteTime>
+      <LastWriteTime>2024-07-06T01:37:31.6617852Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadGastos.dtsx</Name>
-      <LastWriteTime>2024-07-22T02:13:17.2231272Z</LastWriteTime>
+      <LastWriteTime>2024-07-06T01:31:17.8154257Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadMetas.dtsx</Name>
-      <LastWriteTime>2024-07-22T02:13:50.9753528Z</LastWriteTime>
+      <LastWriteTime>2024-07-06T01:36:02.1856527Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
