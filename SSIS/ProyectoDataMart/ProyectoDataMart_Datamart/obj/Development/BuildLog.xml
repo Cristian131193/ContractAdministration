@@ -2,38 +2,43 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ProyectoDataMart_Datamart</Name>
-    <LastWriteTime>2024-07-21T22:25:16.7662435Z</LastWriteTime>
+    <LastWriteTime>2024-07-28T18:57:30.4938677Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimGastos.dtsx</Name>
-      <LastWriteTime>2024-07-14T23:15:21.1617377Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T21:24:24.469765Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimIngresos.dtsx</Name>
-      <LastWriteTime>2024-07-14T23:16:45.3339492Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T19:47:14.2702042Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimMetas.dtsx</Name>
-      <LastWriteTime>2024-07-14T23:15:21.1777389Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T21:24:24.4541422Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimTiempo.dtsx</Name>
-      <LastWriteTime>2024-07-15T01:09:50.7695904Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T21:26:33.8521409Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactMovimientos.dtsx</Name>
-      <LastWriteTime>2024-07-21T22:19:09.8333795Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T19:24:10.3619796Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DataMart Master.dtsx</Name>
-      <LastWriteTime>2024-07-21T22:25:16.7412441Z</LastWriteTime>
+      <LastWriteTime>2024-07-28T19:24:55.4263606Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FactMovimientos 1.dtsx</Name>
+      <LastWriteTime>2024-07-28T21:26:33.777134Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

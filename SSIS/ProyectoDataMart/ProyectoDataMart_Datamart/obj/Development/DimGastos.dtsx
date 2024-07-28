@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimGastos"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{BFF47443-B6B7-4E59-B838-FBBD06CB930D}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{0AD36E32-EDAC-4481-9A90-C29626AC25C1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3025,7 +3025,8 @@ VALUES
        [Gastos_SK]
       ,[Gastos_BK]
       ,[Gastos_Descrip]
-  FROM [dbo].[Dim_Gastos]</property>
+  FROM [dbo].[Dim_Gastos]
+ORDER BY [Gastos_BK]</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."

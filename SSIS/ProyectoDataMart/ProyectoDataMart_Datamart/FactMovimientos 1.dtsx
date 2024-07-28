@@ -5,70 +5,192 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-C27PBJT"
   DTS:CreatorName="DESKTOP-C27PBJT\cristian"
-  DTS:DTSID="{9EC0561B-898A-4A5E-9DD3-DEC8146CA2CA}"
+  DTS:DTSID="{B4075206-7FCB-4C4F-9719-0080C425B162}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5314.0"
   DTS:LocaleID="3082"
   DTS:ObjectName="FactMovimientos"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{834923C8-14B6-4B77-B34D-737F2D2BA8D6}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{40FE1118-52AD-42EA-9A83-4381649EDEFB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0AA01E7A-570C-4E6E-811D-CB16864DC79E}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\cristian\Desktop\union.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_SK"
+              DTS:DTSID="{4C7B6D44-59D3-4254-8E9B-8D599EE47502}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tiempo_SK"
+              DTS:DTSID="{D80FB75E-205A-484C-BDA9-513D24F1DD30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tipo"
+              DTS:DTSID="{5011E231-407F-44A2-B7A3-6215B723EEC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Monto"
+              DTS:DTSID="{68ACB9BF-2227-4BC4-9E34-FBCE7D96D4AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StageMD5"
+              DTS:DTSID="{CDA9D57F-A9C3-4E0D-9693-B0A8046C3600}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AE5B832C-9706-4215-855F-B9D6FC5F2694}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\cristian\Desktop\merge.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_SK"
+              DTS:DTSID="{D7B2665D-8541-4DFF-993B-6E5B69723E3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tiempo_SK"
+              DTS:DTSID="{684D0D56-E17D-4691-A4AE-E8547B33B373}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tipo"
+              DTS:DTSID="{FE7DDF14-71F2-41F3-9CB5-62571028AE75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Monto"
+              DTS:DTSID="{076A81D9-3D86-431A-A1B4-9A8D1243861D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StageMD5"
+              DTS:DTSID="{96F20031-D003-47DB-8787-639E98F89E90}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_DATAMART]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{419578C4-7DF9-4B0A-989E-C3029C8DD718}"
+      DTS:DTSID="{B7F68956-6BC5-40F9-949B-C3E48166982D}"
       DTS:ObjectName="LocalHost.GASTOSPERSONALES_DATAMART">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_DATAMART;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{419578C4-7DF9-4B0A-989E-C3029C8DD718}LocalHost.GASTOSPERSONALES_DATAMART;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_DATAMART;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{B7F68956-6BC5-40F9-949B-C3E48166982D}LocalHost.GASTOSPERSONALES_DATAMART;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_METADATA]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{F2841340-B843-40EE-A5BF-0A99108CA172}"
+      DTS:DTSID="{40FA1F34-8634-417F-AB08-23CFC5088A61}"
       DTS:ObjectName="LocalHost.GASTOSPERSONALES_METADATA">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{F2841340-B843-40EE-A5BF-0A99108CA172}LocalHost.GASTOSPERSONALES_METADATA;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{40FA1F34-8634-417F-AB08-23CFC5088A61}LocalHost.GASTOSPERSONALES_METADATA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_METADATA 1]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{FF6B2012-9828-4186-9165-EFE99525896A}"
+      DTS:DTSID="{EEE57DD4-E454-4154-B376-672EFDD5D5F9}"
       DTS:ObjectName="LocalHost.GASTOSPERSONALES_METADATA 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{FF6B2012-9828-4186-9165-EFE99525896A}LocalHost.GASTOSPERSONALES_METADATA 1;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{EEE57DD4-E454-4154-B376-672EFDD5D5F9}LocalHost.GASTOSPERSONALES_METADATA 1;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.GASTOSPERSONALES_STAGE]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{776C205F-58FA-47A2-A01B-D50C55479371}"
+      DTS:DTSID="{D1DDA052-40CF-4B8D-BAE1-9F4D71546049}"
       DTS:ObjectName="LocalHost.GASTOSPERSONALES_STAGE">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{776C205F-58FA-47A2-A01B-D50C55479371}LocalHost.GASTOSPERSONALES_STAGE;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GASTOSPERSONALES_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{D1DDA052-40CF-4B8D-BAE1-9F4D71546049}LocalHost.GASTOSPERSONALES_STAGE;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6D83DC35-5109-4BAE-8AC9-CC46BD787651}"
+      DTS:DTSID="{85F65D3E-2872-483F-B998-FB3507DF522F}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ETLCantidadRegistrosModificados">
@@ -77,7 +199,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{64356BDB-2D4C-4B8E-86BA-98B00D1BE6BD}"
+      DTS:DTSID="{E2C4CC90-3328-41D0-AEC4-279D299BB1BD}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ETLCantidadRegistrosNuevos">
@@ -86,7 +208,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9AE85604-9598-44F8-A365-F78D9B892B1C}"
+      DTS:DTSID="{8B4D57FD-EE52-4198-9259-115B9C64A4CA}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ETLExecution">
@@ -99,7 +221,7 @@
       DTS:refId="Package\Fact Movimientos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{CF023B8E-273A-4F28-A3A5-CE9ED30A5BE0}"
+      DTS:DTSID="{50162E62-E75D-449B-8004-0289353C9303}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Fact Movimientos"
@@ -109,7 +231,7 @@
         <DTS:EventHandler
           DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute]"
           DTS:CreationName="OnPostExecute"
-          DTS:DTSID="{887E3E11-0B73-4996-BB1D-3E3E420787F0}"
+          DTS:DTSID="{AE0A2C29-B4BA-4797-8966-86677E74E4CF}"
           DTS:EventID="-1220326504"
           DTS:EventName="OnPostExecute"
           DTS:LocaleID="-1">
@@ -117,7 +239,7 @@
             <DTS:Variable
               DTS:CreationName=""
               DTS:Description="La propiedad de propagación del evento"
-              DTS:DTSID="{63101487-55AD-4355-8E1B-4770C44EC477}"
+              DTS:DTSID="{9A61794E-2900-4346-9EFD-300A8D47EF15}"
               DTS:IncludeInDebugDump="6789"
               DTS:Namespace="System"
               DTS:ObjectName="Propagate">
@@ -130,7 +252,7 @@
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{404545F7-973D-432C-AB0E-DACEF60BBF15}"
+              DTS:DTSID="{ECC89220-AEC8-46D8-B83F-A13C34F1607B}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Tarea Ejecutar SQL"
@@ -138,7 +260,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{F2841340-B843-40EE-A5BF-0A99108CA172}"
+                  SQLTask:Connection="{40FA1F34-8634-417F-AB08-23CFC5088A61}"
                   SQLTask:SqlStatementSource="UPDATE ETLExecution&#xA;SET [ETLCountNewRegister] = ?,&#xA;        [ETLCountModifiedRegister] = ?&#xA;WHERE ID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ParameterBinding
                     SQLTask:ParameterName="0"
@@ -165,7 +287,7 @@
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL 1"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{0627A99A-8357-4F61-BA53-313693AD7E65}"
+              DTS:DTSID="{08F14377-6B05-4DA3-BBC3-A0FBBBEAF2C3}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Tarea Ejecutar SQL 1"
@@ -173,7 +295,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{F2841340-B843-40EE-A5BF-0A99108CA172}"
+                  SQLTask:Connection="{40FA1F34-8634-417F-AB08-23CFC5088A61}"
                   SQLTask:SqlStatementSource="UPDATE ETLExecution&#xA;SET [ETLCountRows]=[ETLCountNewRegister]+[ETLCountModifiedRegister]&#xA;WHERE ID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ParameterBinding
                     SQLTask:ParameterName="0"
@@ -189,7 +311,7 @@
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPostExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
-              DTS:DTSID="{BDD4E467-5D66-4562-99BC-D08FC55D8F65}"
+              DTS:DTSID="{F4A041F9-D00A-4E6F-BBCC-BDD66B6A9998}"
               DTS:From="Package\Fact Movimientos.EventHandlers[OnPostExecute]\Tarea Ejecutar SQL"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
@@ -199,7 +321,7 @@
         <DTS:EventHandler
           DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute]"
           DTS:CreationName="OnPreExecute"
-          DTS:DTSID="{DAE7A717-D880-414C-8B95-56313ADEF5C2}"
+          DTS:DTSID="{AF50B86C-2DF0-4185-809C-D95D1257E9EE}"
           DTS:EventID="0"
           DTS:EventName="OnPreExecute"
           DTS:LocaleID="-1">
@@ -207,7 +329,7 @@
             <DTS:Variable
               DTS:CreationName=""
               DTS:Description="La propiedad de propagación del evento"
-              DTS:DTSID="{7DDEBEA0-3CBE-412E-A03F-9AFC987828FA}"
+              DTS:DTSID="{A2A81042-9758-441E-B52B-CFCCEE42292A}"
               DTS:IncludeInDebugDump="6789"
               DTS:Namespace="System"
               DTS:ObjectName="Propagate">
@@ -220,7 +342,7 @@
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{021D9D63-6E0A-439D-ABDE-4B8F66BB512F}"
+              DTS:DTSID="{974D7D15-E4DC-4BFA-B8B6-655714CFCC8F}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Tarea Ejecutar SQL"
@@ -228,7 +350,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{F2841340-B843-40EE-A5BF-0A99108CA172}"
+                  SQLTask:Connection="{40FA1F34-8634-417F-AB08-23CFC5088A61}"
                   SQLTask:SqlStatementSource="INSERT INTO ETLExecution(UserName, MachineName, PackageName, ETLLoad) VALUES(?,?,?,GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ParameterBinding
                     SQLTask:ParameterName="0"
@@ -255,7 +377,7 @@
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL 1"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{5170A921-F815-410B-B92C-2222495B374B}"
+              DTS:DTSID="{0325D8E3-F384-46AE-8861-2FD614670D73}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Tarea Ejecutar SQL 1"
@@ -263,7 +385,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{F2841340-B843-40EE-A5BF-0A99108CA172}"
+                  SQLTask:Connection="{40FA1F34-8634-417F-AB08-23CFC5088A61}"
                   SQLTask:SqlStatementSource="SELECT TOP(1) ID FROM ETLExecution&#xA;WHERE PackageName = ?&#xA;ORDER BY ID DESC"
                   SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ResultBinding
@@ -283,7 +405,7 @@
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Fact Movimientos.EventHandlers[OnPreExecute].PrecedenceConstraints[Restricción]"
               DTS:CreationName=""
-              DTS:DTSID="{0039C3A5-E782-4EDC-90C3-55CC205BFB27}"
+              DTS:DTSID="{87D7799C-3AFB-4415-9F65-639B9F10682C}"
               DTS:From="Package\Fact Movimientos.EventHandlers[OnPreExecute]\Tarea Ejecutar SQL"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción"
@@ -346,12 +468,14 @@ VALUES
                       refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Tiempo_SK]"
                       cachedDataType="i4"
                       cachedName="Tiempo_SK"
+                      cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
                     <inputColumn
@@ -501,21 +625,17 @@ AND [Movimientos_Tipo] = ?</property>
                   name="Entrada de comando de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[Monto_Stage]"
-                      cachedDataType="cy"
-                      cachedName="Monto_Stage"
-                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto_Stage]" />
-                    <inputColumn
                       refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[Tiempo_SK]"
                       cachedDataType="i4"
                       cachedName="Tiempo_SK"
+                      cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
                     <inputColumn
@@ -525,6 +645,12 @@ AND [Movimientos_Tipo] = ?</property>
                       cachedName="Movimientos_Tipo"
                       externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Movimientos_Tipo]" />
+                    <inputColumn
+                      refId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].Columns[Monto]"
+                      cachedDataType="cy"
+                      cachedName="Monto"
+                      externalMetadataColumnId="Package\Fact Movimientos\Comando de OLE DB 1.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -644,7 +770,7 @@ AND [Movimientos_Tipo] = ?</property>
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[Tiempo_SK]"
@@ -657,7 +783,7 @@ AND [Movimientos_Tipo] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[Monto]"
@@ -682,7 +808,7 @@ AND [Movimientos_Tipo] = ?</property>
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Tiempo_SK]"
@@ -695,7 +821,7 @@ AND [Movimientos_Tipo] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Movimientos_Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Movimientos_Monto]"
@@ -719,11 +845,11 @@ AND [Movimientos_Tipo] = ?</property>
                   name="Salida de combinación de mezcla">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK_Stage]"
+                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]"
                       dataType="i4"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK_Stage]"
-                      name="ID_SK_Stage"
-                      sortKeyPosition="2">
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]"
+                      name="ID_SK"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -733,10 +859,10 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK_Stage]"
+                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]"
                       dataType="i4"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK_Stage]"
-                      name="Tiempo_SK_Stage"
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]"
+                      name="Tiempo_SK"
                       sortKeyPosition="3">
                       <properties>
                         <property
@@ -747,12 +873,12 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo_Stage]"
+                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo]"
                       dataType="wstr"
                       length="6"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo_Stage]"
-                      name="Tipo_Stage"
-                      sortKeyPosition="1">
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo]"
+                      name="Tipo"
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -762,10 +888,10 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto_Stage]"
+                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto]"
                       dataType="cy"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto_Stage]"
-                      name="Monto_Stage">
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto]"
+                      name="Monto">
                       <properties>
                         <property
                           containsID="true"
@@ -789,10 +915,10 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]"
+                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK (1)]"
                       dataType="i4"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]"
-                      name="ID_SK">
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK (1)]"
+                      name="ID_SK (1)">
                       <properties>
                         <property
                           containsID="true"
@@ -802,10 +928,10 @@ AND [Movimientos_Tipo] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]"
+                      refId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK (1)]"
                       dataType="i4"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]"
-                      name="Tiempo_SK">
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK (1)]"
+                      name="Tiempo_SK (1)">
                       <properties>
                         <property
                           containsID="true"
@@ -1878,7 +2004,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[Tiempo_SK]"
@@ -1891,7 +2017,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[Monto]"
@@ -2941,7 +3067,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[Tiempo_SK]"
@@ -2954,7 +3080,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Movimientos_Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[Movimientos_Monto]"
@@ -3055,33 +3181,33 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID_SK_Stage]"
+                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID_SK]"
                       cachedDataType="i4"
-                      cachedName="ID_SK_Stage"
-                      cachedSortKeyPosition="2"
+                      cachedName="ID_SK"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_SK]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK_Stage]" />
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tiempo_SK_Stage]"
+                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tiempo_SK]"
                       cachedDataType="i4"
-                      cachedName="Tiempo_SK_Stage"
+                      cachedName="Tiempo_SK"
                       cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Tiempo_SK]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK_Stage]" />
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tiempo_SK]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tipo_Stage]"
+                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Tipo]"
                       cachedDataType="wstr"
                       cachedLength="6"
-                      cachedName="Tipo_Stage"
-                      cachedSortKeyPosition="1"
+                      cachedName="Tipo"
+                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Tipo]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo_Stage]" />
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo]" />
                     <inputColumn
-                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Monto_Stage]"
+                      refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Monto]"
                       cachedDataType="cy"
-                      cachedName="Monto_Stage"
+                      cachedName="Monto"
                       externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Monto]"
-                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto_Stage]" />
+                      lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Monto]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3329,7 +3455,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       externalMetadataColumnId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_SK]"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]"
                       name="ID_SK"
-                      sortKeyPosition="2"
+                      sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tiempo_SK]"
@@ -3350,7 +3476,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       length="6"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Tipo]"
                       name="Movimientos_Tipo"
-                      sortKeyPosition="1"
+                      sortKeyPosition="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Monto]"
@@ -3466,13 +3592,13 @@ A.Fecha = C.Fecha_BK
 
 UNION
 
-SELECT B.Gastos_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
+SELECT B.Ingresos_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
 
 
 FROM [GASTOSPERSONALES_STAGE].[dbo].[MOVIMIENTOS] A
-JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Gastos] B
+JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Ingresos] B
 ON 
-A.ID = B.Gastos_BK
+A.ID = B.Ingresos_BK
 AND A.Tipo = 'INGRES'
 JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Tiempo] C
 ON
@@ -3480,13 +3606,13 @@ A.Fecha = C.Fecha_BK
 
 UNION
 
-SELECT B.Gastos_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
+SELECT B.Metas_SK AS ID_SK, C.Tiempo_SK, A.Tipo, A.Monto
 
 
 FROM [GASTOSPERSONALES_STAGE].[dbo].[MOVIMIENTOS] A
-JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Gastos] B
+JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Metas] B
 ON 
-A.ID = B.Gastos_BK
+A.ID = B.Metas_BK
 AND A.Tipo = 'METAS'
 JOIN [GASTOSPERSONALES_DATAMART].[dbo].[Dim_Tiempo] C
 ON
@@ -3535,7 +3661,7 @@ A.Fecha = C.Fecha_BK</property>
                       externalMetadataColumnId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_SK]"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]"
                       name="ID_SK"
-                      sortKeyPosition="2"
+                      sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tiempo_SK]"
@@ -3556,7 +3682,7 @@ A.Fecha = C.Fecha_BK</property>
                       length="6"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tipo]"
                       name="Tipo"
-                      sortKeyPosition="1"
+                      sortKeyPosition="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Monto]"
@@ -3772,25 +3898,93 @@ A.Fecha = C.Fecha_BK</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="225,42"
-          Id="Package\Fact Movimientos\Origen Datamart Movimientos"
-          TopLeft="437,55" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\Fact Movimientos\Origen Stage Movimientos"
-          TopLeft="106,55" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Fact Movimientos\División condicional"
-          TopLeft="278,441" />
-        <NodeLayout
           Size="186,42"
           Id="Package\Fact Movimientos\Componente de script"
           TopLeft="98,191" />
         <NodeLayout
+          Size="175,42"
+          Id="Package\Fact Movimientos\Destino de OLE DB"
+          TopLeft="45,660" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Fact Movimientos\Combinación de mezcla"
+          TopLeft="267,417" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fact Movimientos\Recuento de filas"
+          TopLeft="53,532" />
+        <NodeLayout
           Size="195,42"
           Id="Package\Fact Movimientos\Componente de script 1"
           TopLeft="441,193" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Fact Movimientos\Origen Datamart Movimientos"
+          TopLeft="437,55" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Fact Movimientos\Comando de OLE DB 1"
+          TopLeft="532,760" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Fact Movimientos\División condicional"
+          TopLeft="281,534" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Fact Movimientos\Recuento de filas 1"
+          TopLeft="545,537" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Fact Movimientos\Comando de OLE DB"
+          TopLeft="542,655" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Fact Movimientos\Origen Stage Movimientos"
+          TopLeft="106,55" />
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
+          TopLeft="633,579">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
+          TopLeft="133.75,574">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,86"
+              Start="0,0"
+              End="0,78.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,78.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de origen de OLE DB1]"
           TopLeft="210.5,97">
@@ -3822,9 +4016,7 @@ A.Fecha = C.Fecha_BK</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-17.75,52,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3861,36 +4053,44 @@ A.Fecha = C.Fecha_BK</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Fact Movimientos\Combinación de mezcla"
-          TopLeft="263,299" />
         <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida 0]"
-          TopLeft="191,233">
+          Id="Package\Fact Movimientos.Paths[Salida de combinación de mezcla]"
+          TopLeft="367,459">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="170,66"
+              EndConnector="0,75"
               Start="0,0"
-              End="170,58.5">
+              End="0,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29"
-                    Point2="0,33"
-                    Point3="4,33" />
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,25.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
+          TopLeft="631.75,697">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="166,33" />
-                  <mssgle:CubicBezierSegment
-                    Point1="166,33"
-                    Point2="170,33"
-                    Point3="170,37" />
-                  <mssgle:LineSegment
-                    End="170,58.5" />
+                    End="0,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3905,67 +4105,75 @@ A.Fecha = C.Fecha_BK</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-146.166666666667,64"
+              EndConnector="-142.166666666667,182"
               Start="0,0"
-              End="-146.166666666667,56.5">
+              End="-142.166666666667,174.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.0890688259109" />
+                    End="0,104.315789473684" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.0890688259109"
-                    Point2="0,38.0890688259109"
-                    Point3="-4,38.0890688259109" />
+                    Point1="0,104.315789473684"
+                    Point2="0,108.315789473684"
+                    Point3="-4,108.315789473684" />
                   <mssgle:LineSegment
-                    End="-142.166666666667,38.0890688259109" />
+                    End="-138.166666666667,108.315789473684" />
                   <mssgle:CubicBezierSegment
-                    Point1="-142.166666666667,38.0890688259109"
-                    Point2="-146.166666666667,38.0890688259109"
-                    Point3="-146.166666666667,42.0890688259109" />
+                    Point1="-138.166666666667,108.315789473684"
+                    Point2="-142.166666666667,108.315789473684"
+                    Point3="-142.166666666667,112.315789473684" />
                   <mssgle:LineSegment
-                    End="-146.166666666667,56.5" />
+                    End="-142.166666666667,174.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-79.0833333333335,113.315789473684,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de combinación de mezcla]"
-          TopLeft="363.5,341">
+          Id="Package\Fact Movimientos.Paths[Salida 0]"
+          TopLeft="191,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,100"
+              EndConnector="174,184"
               Start="0,0"
-              End="0,92.5">
+              End="174,176.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.5" />
+                    End="0,88" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,88"
+                    Point2="0,92"
+                    Point3="4,92" />
+                  <mssgle:LineSegment
+                    End="170,92" />
+                  <mssgle:CubicBezierSegment
+                    Point1="170,92"
+                    Point2="174,92"
+                    Point3="174,96" />
+                  <mssgle:LineSegment
+                    End="174,176.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="79,97,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Fact Movimientos\Recuento de filas"
-          TopLeft="50,439" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Fact Movimientos\Recuento de filas 1"
-          TopLeft="542,444" />
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Mov Nuevos]"
-          TopLeft="278,461">
+          TopLeft="281,554">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3989,7 +4197,7 @@ A.Fecha = C.Fecha_BK</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Mov Modificados]"
-          TopLeft="454,463.5">
+          TopLeft="457,556.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4009,84 +4217,6 @@ A.Fecha = C.Fecha_BK</property>
             <mssgm:EdgeLabel
               BoundingBox="3.232421875,5,74.03515625,9.7978515625"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Fact Movimientos\Destino de OLE DB"
-          TopLeft="42,567" />
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
-          TopLeft="130.75,481">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,86"
-              Start="0,0"
-              End="0,78.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,78.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB"
-          TopLeft="539,562" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB 1"
-          TopLeft="529,667" />
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
-          TopLeft="630,486">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76"
-              Start="0,0"
-              End="0,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
-          TopLeft="628.75,604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4173,6 +4303,19 @@ A.Fecha = C.Fecha_BK</property>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
+    design-time-name="Package\Fact Movimientos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Fact Movimientos\Origen Datamart Movimientos">
     <Properties>
       <Property>
@@ -4185,19 +4328,6 @@ A.Fecha = C.Fecha_BK</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact Movimientos\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

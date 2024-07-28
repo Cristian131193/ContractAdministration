@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DataMart Master"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{93623A00-FF0D-4254-829B-AFB218FF7CC1}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{DFB60FDE-B3BE-4071-BD4D-1CBC53394F5B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -98,7 +98,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>FactMovimientos.dtsx</PackageName>
+          <PackageName>FactMovimientos 1.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>

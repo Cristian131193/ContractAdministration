@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimTiempo"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{4CF3F37D-F18D-48C2-AEFE-2A8A8E1DC81F}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{EDA386C6-CA07-4069-9CCE-CE6565920D7F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2998,7 +2998,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       ,[Tiempo_Anno]
       ,[Tiempo_Mes]
       ,[Tiempo_Dia]
-  FROM [dbo].[Dim_Tiempo]</property>
+  FROM [dbo].[Dim_Tiempo]
+ORDER BY [Fecha_BK]</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -3194,7 +3195,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       ,[Mes]
       ,[Día]
 FROM [dbo].[TIEMPO]
-ORDER BY [FechaID]</property>
+ORDER BY [Fecha]</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -3436,25 +3437,13 @@ ORDER BY [FechaID]</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="200,42"
-          Id="Package\Dim Tiempo\Origen Datamart Tiempo"
-          TopLeft="437,55" />
-        <NodeLayout
           Size="183,42"
           Id="Package\Dim Tiempo\Origen Stage Tiempo"
           TopLeft="105,54" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\Dim Tiempo\División condicional"
-          TopLeft="277,441" />
-        <NodeLayout
-          Size="186,42"
-          Id="Package\Dim Tiempo\Componente de script"
-          TopLeft="98,191" />
-        <NodeLayout
-          Size="195,42"
-          Id="Package\Dim Tiempo\Componente de script 1"
-          TopLeft="441,193" />
+          Size="200,42"
+          Id="Package\Dim Tiempo\Origen Datamart Tiempo"
+          TopLeft="437,55" />
         <NodeLayout
           Size="175,42"
           Id="Package\Dim Tiempo\Destino de OLE DB"
@@ -3463,52 +3452,22 @@ ORDER BY [FechaID]</property>
           Size="164,42"
           Id="Package\Dim Tiempo\Recuento de filas"
           TopLeft="284,549" />
-        <EdgeLayout
-          Id="Package\Dim Tiempo.Paths[Gastos Nuevos]"
-          TopLeft="365.5,483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66"
-              Start="0,0"
-              End="0,58.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-33.30509765625,24.47314453125,66.6101953125,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Dim Tiempo.Paths[Salida de Recuento de filas 1]"
-          TopLeft="363.25,591">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,69"
-              Start="0,0"
-              End="0,61.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,61.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Dim Tiempo\Componente de script 1"
+          TopLeft="441,193" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Dim Tiempo\Combinación de mezcla"
+          TopLeft="266,321" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Dim Tiempo\División condicional"
+          TopLeft="277,441" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Dim Tiempo\Componente de script"
+          TopLeft="98,191" />
         <EdgeLayout
           Id="Package\Dim Tiempo.Paths[Salida de origen de OLE DB1]"
           TopLeft="193.75,96">
@@ -3553,36 +3512,20 @@ ORDER BY [FechaID]</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Dim Tiempo\Combinación de mezcla"
-          TopLeft="266,321" />
         <EdgeLayout
-          Id="Package\Dim Tiempo.Paths[Salida 0]"
-          TopLeft="191,233">
+          Id="Package\Dim Tiempo.Paths[Salida de combinación de mezcla]"
+          TopLeft="364.5,363">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="173,88"
+              EndConnector="0,78"
               Start="0,0"
-              End="173,80.5">
+              End="0,70.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,40"
-                    Point2="0,44"
-                    Point3="4,44" />
-                  <mssgle:LineSegment
-                    End="169,44" />
-                  <mssgle:CubicBezierSegment
-                    Point1="169,44"
-                    Point2="173,44"
-                    Point3="173,48" />
-                  <mssgle:LineSegment
-                    End="173,80.5" />
+                    End="0,70.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3622,23 +3565,85 @@ ORDER BY [FechaID]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-79.5833333333335,56.1821862348178,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dim Tiempo.Paths[Salida de combinación de mezcla]"
-          TopLeft="364.5,363">
+          Id="Package\Dim Tiempo.Paths[Salida 0]"
+          TopLeft="191,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78"
+              EndConnector="173,88"
               Start="0,0"
-              End="0,70.5">
+              End="173,80.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.5" />
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="4,44" />
+                  <mssgle:LineSegment
+                    End="169,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="169,44"
+                    Point2="173,44"
+                    Point3="173,48" />
+                  <mssgle:LineSegment
+                    End="173,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="78.5,49,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dim Tiempo.Paths[Gastos Nuevos]"
+          TopLeft="365.5,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-33.30509765625,24.47314453125,66.6101953125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dim Tiempo.Paths[Salida de Recuento de filas 1]"
+          TopLeft="363.25,591">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3731,7 +3736,7 @@ ORDER BY [FechaID]</property>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
-    design-time-name="Package\Dim Tiempo\Origen Datamart Tiempo">
+    design-time-name="Package\Dim Tiempo\Origen Stage Tiempo">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3739,7 +3744,7 @@ ORDER BY [FechaID]</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dim Tiempo\Origen Stage Tiempo">
+    design-time-name="Package\Dim Tiempo\Origen Datamart Tiempo">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimIngresos"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{8B4E6B1D-8995-4A17-9957-A1578FA12886}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{38073B49-30EB-44B1-9944-590CC038E393}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -438,6 +438,7 @@ WHERE M.Ingresos_SK = ?</property>
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Descrip"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Dim Ingresos\Origen Stage Ingresos.Outputs[Salida de origen de OLE DB].Columns[Descrip]" />
                     <inputColumn
                       refId="Package\Dim Ingresos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[StageMD5]"
@@ -469,6 +470,7 @@ WHERE M.Ingresos_SK = ?</property>
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Ingresos_Descrip"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Dim Ingresos\Origen Datamart Ingresos.Outputs[Salida de origen de OLE DB].Columns[Ingresos_Descrip]" />
                     <inputColumn
                       refId="Package\Dim Ingresos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[DatamartMD5]"
@@ -1581,6 +1583,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Descrip"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Dim Ingresos\Origen Stage Ingresos.Outputs[Salida de origen de OLE DB].Columns[Descrip]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -2610,6 +2613,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="60"
                       cachedName="Ingresos_Descrip"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Dim Ingresos\Origen Datamart Ingresos.Outputs[Salida de origen de OLE DB].Columns[Ingresos_Descrip]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -3036,7 +3040,8 @@ VALUES
        [Ingresos_SK]
       ,[Ingresos_BK]
       ,[Ingresos_Descrip]
-  FROM [dbo].[Dim_Ingresos]</property>
+  FROM [dbo].[Dim_Ingresos]
+ORDER BY [Ingresos_BK]</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -3101,6 +3106,7 @@ VALUES
                       length="60"
                       lineageId="Package\Dim Ingresos\Origen Datamart Ingresos.Outputs[Salida de origen de OLE DB].Columns[Ingresos_Descrip]"
                       name="Ingresos_Descrip"
+                      sortKeyPosition="2"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -3243,6 +3249,7 @@ ORDER BY [ID]</property>
                       length="60"
                       lineageId="Package\Dim Ingresos\Origen Stage Ingresos.Outputs[Salida de origen de OLE DB].Columns[Descrip]"
                       name="Descrip"
+                      sortKeyPosition="2"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -3527,7 +3534,9 @@ ORDER BY [ID]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-79.0833333333335,53.2064777327935,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3596,7 +3605,7 @@ ORDER BY [ID]</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-150.96623046875,35,66.6101953125,9.5537109375"
+              BoundingBox="-150.96623046875,35,83.9324609375,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3755,7 +3764,9 @@ ORDER BY [ID]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,29.75,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

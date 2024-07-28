@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="FactMovimientos"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{834923C8-14B6-4B77-B34D-737F2D2BA8D6}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{02865E19-F7C7-4546-A5E7-C7F987DE3BFE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -644,7 +644,7 @@ AND [Movimientos_Tipo] = ?</property>
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[Tiempo_SK]"
@@ -657,7 +657,7 @@ AND [Movimientos_Tipo] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[Monto]"
@@ -682,7 +682,7 @@ AND [Movimientos_Tipo] = ?</property>
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Tiempo_SK]"
@@ -695,7 +695,7 @@ AND [Movimientos_Tipo] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Movimientos_Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Movimientos_Monto]"
@@ -723,7 +723,7 @@ AND [Movimientos_Tipo] = ?</property>
                       dataType="i4"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK_Stage]"
                       name="ID_SK_Stage"
-                      sortKeyPosition="2">
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -752,7 +752,7 @@ AND [Movimientos_Tipo] = ?</property>
                       length="6"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo_Stage]"
                       name="Tipo_Stage"
-                      sortKeyPosition="1">
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -1878,7 +1878,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[Tiempo_SK]"
@@ -1891,7 +1891,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script.Inputs[Entrada 0].Columns[Monto]"
@@ -2941,7 +2941,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[ID_SK]"
                       cachedDataType="i4"
                       cachedName="ID_SK"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[Tiempo_SK]"
@@ -2954,7 +2954,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Movimientos_Tipo"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Tipo]" />
                     <inputColumn
                       refId="Package\Fact Movimientos\Componente de script 1.Inputs[Entrada 0].Columns[Movimientos_Monto]"
@@ -3058,7 +3058,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID_SK_Stage]"
                       cachedDataType="i4"
                       cachedName="ID_SK_Stage"
-                      cachedSortKeyPosition="2"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_SK]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_SK_Stage]" />
                     <inputColumn
@@ -3073,7 +3073,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="Tipo_Stage"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Fact Movimientos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Movimientos_Tipo]"
                       lineageId="Package\Fact Movimientos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Tipo_Stage]" />
                     <inputColumn
@@ -3329,7 +3329,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       externalMetadataColumnId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_SK]"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]"
                       name="ID_SK"
-                      sortKeyPosition="2"
+                      sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tiempo_SK]"
@@ -3350,7 +3350,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       length="6"
                       lineageId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Tipo]"
                       name="Movimientos_Tipo"
-                      sortKeyPosition="1"
+                      sortKeyPosition="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Datamart Movimientos.Outputs[Salida de origen de OLE DB].Columns[Movimientos_Monto]"
@@ -3535,7 +3535,7 @@ A.Fecha = C.Fecha_BK</property>
                       externalMetadataColumnId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_SK]"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[ID_SK]"
                       name="ID_SK"
-                      sortKeyPosition="2"
+                      sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tiempo_SK]"
@@ -3556,7 +3556,7 @@ A.Fecha = C.Fecha_BK</property>
                       length="6"
                       lineageId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Tipo]"
                       name="Tipo"
-                      sortKeyPosition="1"
+                      sortKeyPosition="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Fact Movimientos\Origen Stage Movimientos.Outputs[Salida de origen de OLE DB].Columns[Monto]"
@@ -3772,25 +3772,93 @@ A.Fecha = C.Fecha_BK</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="186,42"
+          Id="Package\Fact Movimientos\Componente de script"
+          TopLeft="98,191" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Fact Movimientos\Destino de OLE DB"
+          TopLeft="42,567" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Fact Movimientos\Combinación de mezcla"
+          TopLeft="263,299" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fact Movimientos\Recuento de filas"
+          TopLeft="50,439" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Fact Movimientos\Componente de script 1"
+          TopLeft="441,193" />
+        <NodeLayout
           Size="225,42"
           Id="Package\Fact Movimientos\Origen Datamart Movimientos"
           TopLeft="437,55" />
         <NodeLayout
-          Size="209,42"
-          Id="Package\Fact Movimientos\Origen Stage Movimientos"
-          TopLeft="106,55" />
+          Size="194,42"
+          Id="Package\Fact Movimientos\Comando de OLE DB 1"
+          TopLeft="529,667" />
         <NodeLayout
           Size="176,42"
           Id="Package\Fact Movimientos\División condicional"
           TopLeft="278,441" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Fact Movimientos\Componente de script"
-          TopLeft="98,191" />
+          Size="173,42"
+          Id="Package\Fact Movimientos\Recuento de filas 1"
+          TopLeft="542,444" />
         <NodeLayout
-          Size="195,42"
-          Id="Package\Fact Movimientos\Componente de script 1"
-          TopLeft="441,193" />
+          Size="185,42"
+          Id="Package\Fact Movimientos\Comando de OLE DB"
+          TopLeft="539,562" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Fact Movimientos\Origen Stage Movimientos"
+          TopLeft="106,55" />
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
+          TopLeft="630,486">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
+          TopLeft="130.75,481">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,86"
+              Start="0,0"
+              End="0,78.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,78.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Salida de origen de OLE DB1]"
           TopLeft="210.5,97">
@@ -3822,9 +3890,7 @@ A.Fecha = C.Fecha_BK</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-17.75,52,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3861,36 +3927,42 @@ A.Fecha = C.Fecha_BK</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Fact Movimientos\Combinación de mezcla"
-          TopLeft="263,299" />
         <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida 0]"
-          TopLeft="191,233">
+          Id="Package\Fact Movimientos.Paths[Salida de combinación de mezcla]"
+          TopLeft="363.5,341">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="170,66"
+              EndConnector="0,100"
               Start="0,0"
-              End="170,58.5">
+              End="0,92.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29"
-                    Point2="0,33"
-                    Point3="4,33" />
+                    End="0,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
+          TopLeft="628.75,604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="166,33" />
-                  <mssgle:CubicBezierSegment
-                    Point1="166,33"
-                    Point2="170,33"
-                    Point3="170,37" />
-                  <mssgle:LineSegment
-                    End="170,58.5" />
+                    End="0,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3934,19 +4006,31 @@ A.Fecha = C.Fecha_BK</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de combinación de mezcla]"
-          TopLeft="363.5,341">
+          Id="Package\Fact Movimientos.Paths[Salida 0]"
+          TopLeft="191,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,100"
+              EndConnector="170,66"
               Start="0,0"
-              End="0,92.5">
+              End="170,58.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.5" />
+                    End="0,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="4,33" />
+                  <mssgle:LineSegment
+                    End="166,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="166,33"
+                    Point2="170,33"
+                    Point3="170,37" />
+                  <mssgle:LineSegment
+                    End="170,58.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3955,14 +4039,6 @@ A.Fecha = C.Fecha_BK</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Fact Movimientos\Recuento de filas"
-          TopLeft="50,439" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Fact Movimientos\Recuento de filas 1"
-          TopLeft="542,444" />
         <EdgeLayout
           Id="Package\Fact Movimientos.Paths[Mov Nuevos]"
           TopLeft="278,461">
@@ -3983,7 +4059,7 @@ A.Fecha = C.Fecha_BK</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.602578125,5,54.70515625,9.421875"
+              BoundingBox="-64.47123046875,5,72.4424609375,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4009,84 +4085,6 @@ A.Fecha = C.Fecha_BK</property>
             <mssgm:EdgeLabel
               BoundingBox="3.232421875,5,74.03515625,9.7978515625"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Fact Movimientos\Destino de OLE DB"
-          TopLeft="42,567" />
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 1]"
-          TopLeft="130.75,481">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,86"
-              Start="0,0"
-              End="0,78.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,78.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB"
-          TopLeft="539,562" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Fact Movimientos\Comando de OLE DB 1"
-          TopLeft="529,667" />
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de Recuento de filas 11]"
-          TopLeft="630,486">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76"
-              Start="0,0"
-              End="0,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fact Movimientos.Paths[Salida de comando de OLE DB]"
-          TopLeft="628.75,604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4173,6 +4171,19 @@ A.Fecha = C.Fecha_BK</property>
     </LayoutInfo>
   </DtsEventHandler>
   <PipelineComponentMetadata
+    design-time-name="Package\Fact Movimientos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Fact Movimientos\Origen Datamart Movimientos">
     <Properties>
       <Property>
@@ -4185,19 +4196,6 @@ A.Fecha = C.Fecha_BK</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact Movimientos\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
